@@ -1,0 +1,79 @@
+html, body, div, span, applet, object, iframe,
+h1, h1, h2, h3, h5, h6, p, blockquote, pre,
+a, abbr, abbr, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-family:inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+.sidebar {
+	width: 200px;
+	background-color: white;
+	position: fixed;
+	top: 0em;
+	left: 10px;
+	padding: 2.4em 10px .8em;
+	color: #black;
+	outline: #98ff98 dotted thick;
+}
+
+.sidebar a { color: green; }
+
+.sidebar h2 {
+	display: block;
+	margin: 0 0 1.2em;
+	
+}
+
+.sidebar ul {
+	margin: 0 0 2.4em;
+	font-size: 1.25em;
+	text-align: center;
+	line-height: 1.2em;
+	
+}
+
+.sidebar ul li {
+	margin-bottom: .8em;
+	text-align: center;
+	
+}
+
+.nav h2 {
+	background-image: url("../resources/snail.png");
+}
+
+.nav ul li {
+	margin: 0 0 1.2em;
+	
+}
+
+.nav ul li a {
+	display: block;
+	padding: .5em 5px .6em;
+	font-size: 1.1em;
+	margin-bottom: .3em;
+}
+
+.nav ul li a.main-link{
+	outline: #98ff98 dotted thin;
+	margin-top: 20px;
+}
+.nav ul li a.sub-link {
+	background-color: white;
+	display: block;
+	padding: 0;
+	font-size: 1em;
+	margin-bottom: 0;
+}
