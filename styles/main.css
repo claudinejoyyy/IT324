@@ -17,6 +17,11 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	vertical-align: baseline;
 }
 
+div.page_wrap {
+	font-size: 20px;
+	margin-top: 80px;
+	margin-left: 300px;
+}
 .sidebar {
 	width: 200px;
 	background-color: white;
@@ -24,8 +29,8 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	top: 0em;
 	left: 10px;
 	padding: 2.4em 10px .8em;
-	color: #black;
-	outline: #98ff98 dotted thick;
+	color: white;
+	outline: #4AC948 dotted thick;
 }
 
 .sidebar a { color: green; }
@@ -47,7 +52,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 .sidebar ul li {
 	margin-bottom: .8em;
 	text-align: center;
-	
 }
 
 .nav h2 {
@@ -64,16 +68,19 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	padding: .5em 5px .6em;
 	font-size: 1.1em;
 	margin-bottom: .3em;
+	font-size: 1.00em;
 }
 
 .nav ul li a.main-link{
 	outline: #98ff98 dotted thin;
 	margin-top: 20px;
 }
+
 .nav ul li a.sub-link {
 	background-color: white;
 	display: block;
 	padding: 0;
-	font-size: 1em;
+	font-size: 0.75em;
 	margin-bottom: 0;
+	text-align: left;
 }
