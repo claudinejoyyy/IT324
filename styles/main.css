@@ -19,11 +19,11 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
 div.page_wrap {
 	font-size: 20px;
-	margin-top: 80px;
-	margin-left: 300px;
+	margin-top: 50px;
+	margin-left: 350px;
 }
 .sidebar {
-	width: 200px;
+	width: auto;
 	background-color: white;
 	position: fixed;
 	top: 0em;
