@@ -28,7 +28,7 @@ div.page_wrap {
 	position: fixed;
 	top: 0em;
 	left: 10px;
-	padding: 2.4em 10px .8em;
+	padding: 0em 10px .8em;
 	color: white;
 	outline: #4AC948 dotted thick;
 }
@@ -37,7 +37,6 @@ div.page_wrap {
 
 .sidebar h2 {
 	display: block;
-	margin: 0 0 1.2em;
 	
 }
 
@@ -66,7 +65,6 @@ div.page_wrap {
 .nav ul li a {
 	display: block;
 	padding: .5em 5px .6em;
-	font-size: 1.1em;
 	margin-bottom: .3em;
 	font-size: 1.00em;
 }
