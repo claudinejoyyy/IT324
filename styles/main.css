@@ -17,11 +17,32 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	vertical-align: baseline;
 }
 
+html {
+	background-color: #F0FFF0;
+}
+
+p {
+	background-color: #CCFFCC;
+	color: black;
+	width: 90%;
+	padding: 30px;
+}
+
+h1 {
+	background-color: #98FB98;
+	color: white;
+	width: 90%;
+	padding: 30px;
+	text-align: center;
+	outline: #32CD32 dotted thin;
+}
+
 div.page_wrap {
 	font-size: 20px;
 	margin-top: 50px;
 	margin-left: 350px;
 }
+
 .sidebar {
 	width: auto;
 	background-color: #CCFFCC;
