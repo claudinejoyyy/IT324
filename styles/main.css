@@ -21,15 +21,17 @@ html {
 	background-color: #F0FFF0;
 }
 
-p.center {
+p{
 	background-color: #CCFFCC;
-	color: black;
+	color: gray;
 	width: 90%;
 	padding: 30px;
+}
+p.center {
 	text-align: center;
 }
 
-h1 {
+h1.title{
 	background-color: #98FB98;
 	color: white;
 	width: 90%;
@@ -37,6 +39,15 @@ h1 {
 	text-align: center;
 	outline: #32CD32 dotted thin;
 	letter-spacing: 20px;
+}
+
+h1.lesson{
+	background-color: #4EEE94;
+	color: white;
+	width: 90%;
+	padding: 30px;
+	text-align: center;
+	outline: #32CD32 dotted thin;
 }
 
 img.block {
