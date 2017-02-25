@@ -1,0 +1,179 @@
+Request Line : method + URI + protocol version
+	Request message
+	Empty line
+	Message body
+Status Line : protocol version + status code + description of status
+	Message header : field name : value
+	Empty line
+	Message body
+Message header	General Header Fields
+		Request Header Fields
+		Response Header Fields
+		Entity Header Fields
+- for HTTP 1.1 requires at least one header (host is required)
+- BLANK LINE is part of the protocol ; it terminates the header
+- Message body is optional (a.k.a payload)
+STATUS Codes:	Informational (1xx)
+	Success (2xx) e.g. 200 OK
+	Redirection (3xx)
+	Clien Error (4xx) e.g. 303 Not Found -> reasen phrase
+	Server Error (5xx)
+for RESPONSE message headers:	General Header Fields
+				Response Header Fields
+				Entity Header Fields
+- message body is normally NOT empty
+- e.g. of Entity Letters - Content-Type: text/html
+			 - Content-Length: 975
+HTTP Request Methods
+o Standard Methods
+- GET 	- retrieve that resource form the URI; returned as an entity
+	- most commonly used HTTP method
+- HEAD 	- came as GET, but only returns status line and response
+	- used to retrieve metadata about the entity
+link rot - happens when certain resources are taken down
+- POST 		- comes in the form of html form data
+		- perform resource
+	- default query form value : enctype = application/x-www-form-un
+		- information submitted is NOT seen on the URL
+	- upload w/pic : enctype = "multipart/form-data"
+- PUT - store the enclosed entity in a specified URL
+- DELETE - remove resource
+	DAV - Distributed
+- OPTIONS - will display what request methods can be used on a host
+	e.g. 	OPTIONS/index.html HTTP/1.1/
+		Host: www.webtek.org
+		<blank space>
+	OPTIONS* - general capatibility of a server
+- TRACE - will request a loop-back of the request message
+	e.g. CONNECT facebook.com 443 HTTP/1.1
+	*"blind relay" - traffic can't be seen
+
+EXTENSION METHODS
+e.g. WebFav (RFC 2819)
+- propfind, droppatch, mkol, copy, move, lock, unlock (ALL CAPS LOCK)
+* DNT - Do Not Track
+* Cookie - keeping track of sessions
+SAFE METHODS - no changes in resources that we are getting
+IDEMPOTENT METHODS - doing the same thing over and over, expecting the same result
+CACHEABLE METHODS - request/response can be cached, depends on the headers
+
+HTTP MESSAGE HEADERS
+- General Header Fields - can be used by client and server
+	- Cache-control: control whether something is to be cached or not
+	- Connection: establish persistent connection e.g. "keep-alive" request
+	- Date: date when a request/response was generated
+	- Pragma: generic directive (older version)
+	- Trailer: additional resource
+	- Transfer-Encoding: encoding of he resource e.g. "chunked"
+	- Upgrade: used to upgrade to another protocol
+	e.g. 	GET/index.html HTTP/1.1
+		Upgrade: h2 for HTTP, Hh2c for HTTPS
+	- Via:	request can go through intermediaries
+		not requiredl nodes may not implement/tag VIA
+	- Warning: placed by intermediate nodes to indicate that something may be wrong
+
+REQUEST HEADERS
+- Accept						-
+- Accept-charset: for content w/ diff. char sets	|-used for negotiation
+- Accept-encoding: e.g. compressed encoding		| (particularly what
+- Accept-language					| resource is acceptable
+							- to the client)
+	- q (quality measure) is only number until 1
+	higher q = better preference/higher prio
+- Authorization	: protecting certain content
+		: usually lasts until cache is cleared
+- Proxy Authorization: authorization is required before passing through the proxy
+- Expect: to prevent wasting bandwidth by downloading/uploading something too big
+	e.g. 	Expect: 100-continue
+		Content-length: 124
+	response could be 100 continue/417 Expectation Failed
+- From: can be used if the user wants to receive notifications
+- Host: contains the particular website
+	dedicated host - entire machine all to yourself
+	virtual hsot - sharing the machine with other users
+- If-Marched		-
+- If-Modified Since	|- CONDITIONAL REQUESTS	
+- If-None-Match		|(If the Etag of the client is not the same with the
+- If Unmodified-since 	-server's the client's copy is not the latest one.
+	entity tag - just an identifier for a resource
+	response could be error 412 - Precondition Failed
+
+RESPONSE HEADER FIELDS
+- Accept-Ranges: for partial resource retrieval
+- Age: age of the resource, typically used in conjunction with controlling cable
+- ETag: editing tag	e.g. "764-547cd3082082f"
+	: like a weak indentity/identifier for the resource
+- Location for redirection
+	: can be used to indicate where a newly created resource is
+- Proxy-Authenticate
+- Retry-After:	in response to 503 service Unavailable
+		indication of when a client can retry
+- Server: shows information about the server
+- Vary: for content negotiation
+- WWW-Authenticate
+
+ENTITY HEADER FIELDS
+- Allw: indicates what operations are allowed on the entity
+- Content-encoding: most common is compressed, gzip
+- Content-language: very helpful for accessibility
+- Content-length: how many bytes is the entity
+- Content-location: done when we're fetching something and serving something else
+- Content-MD5: used to know if the data received was sent without corruption
+	|
+	|-> message digest (deprecated in HTTP 1.1)
+- Content-Range: for partial retrieval
+- Content-Type: MIME type, What kind of content (e.g. image.txt)
+- Expires: allows content in the cache to be cleared after a particular time
+- Last-Modified: Last time a resource was modified
+
+HTTP STATUS CODES
+INFORMATIONAL (1xx)
+- 100 Continue - for two-phased communications
+- 101 Switching Protocols - used when a client asks for an upgrade
+SUCCESS (2xx)
+- 200 OK
+- 201 Created - when something is submitted via PUT
+- 202 Accepted - accepted but not processed yet
+- 203 Non-Authoritative information - resource was retrieved somewhere else
+- 204 No content - if the delete was successful
+- 205 Reset content - to reset data entry forms
+- 206 Partial Content - when a client requests with a range
+REDIRECTION (3xx)
+- 300 Multiple Choices - indicates that the server has multiple versions of a resource
+- 301 Mixed Permanently - if a resource  was moved to a different location
+- 302 Found	<-
+- 303 See Other	<- arises from redirects from the server
+- 304 Not Modified
+- 305 Use Proxy-resource cannot be accessed directly from server
+- 306 (Unused)
+- 307 Temporary Redirect - if a resource was moved to a different location temporarily
+CLIENT ERROR (4xx)
+- 400 Bad Request - request is in malform
+- 401 Unauthorized
+- 402 Payment Ewquired - too primitive to be useful
+- 403 Forbidden - content cannot be accessed by all/selected clients
+	e.g. 	deny from #.edu
+		deny from all (deny from all clients)
+- 404 Not Found
+- 405 Method Not Allowed
+- 406 Not Acceptable - what the server has is not acceptable to the client
+- 407 Proxy Authentication Required
+- 408 Request Time-Out
+- 409 Conflict-returned when there are problems with when the client is trying to do
+- 410 Gone-resource is no longer there
+- 411 Length Required - server has to know the size of the payload
+- 12 Precondition Failed
+- 413 Request Entity Too Large
+- 414 Request URL Too Large
+- 415 Unsupported Media Type
+- 416 Request Range Not Satisfiable
+- 417 Expectation Failed
+- 426 Upgrade Required - rotocol MUST be upgraded
+
+SERVER ERROR (5xx)
+- 500 Internal Server Error - error on server side
+- 501 Not Implemented
+- 502 Bad Gateway - gateway is misconfigured
+- 503 Service Unavailable - when server is under maintenance
+- 504 Gateway Timeout - overloaded
+- 506 HTTP Version Not Supported
