@@ -36,7 +36,7 @@ table {
 }
 
 h1.title{
-	background-color: #4EEE94;
+	background-color: teal;
 	color: white;
 	width: 940px;
 	padding: 30px;
@@ -108,7 +108,7 @@ img.inline-img {
 }
 
 #quote {
-	color: grey;
+	color: black;
 	text-align: right;
 }
 
