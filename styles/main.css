@@ -45,8 +45,9 @@ h1.title{
 	letter-spacing: 20px;
 }
 
-h1.lesson{
+div.lesson{
 	background-color: #4EEE94;
+	font-size: 2.5em;
 	color: white;
 	width: 940px;
 	padding: 30px;
@@ -54,13 +55,13 @@ h1.lesson{
 	outline: #32CD32 dotted thin;
 }
 
-h2{
+div.title1{
 	color: gray;
 	padding-left: 30px;
 	margin-top: 30px;
-	font-size: 35px;
+	font-size: 30px;
 }
-h3{
+div.title2{
 	color: gray;
 	padding-left: 40px;
 	margin-top: 30px;
