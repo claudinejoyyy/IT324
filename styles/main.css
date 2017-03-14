@@ -138,7 +138,8 @@ div.content {
 }
 
 .sidebar a { 
-	color: green; 
+	color: green;
+	text-decoration: none;	
 }
 
 .sidebar h2 {
@@ -189,5 +190,9 @@ div.content {
 	text-align: left;
 }
 a:visited { 
-    color: blue;
+    color: teal;
+	text-decoration: underline;
+}
+a:hover {
+  text-decoration: underline;
 }
