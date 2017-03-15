@@ -8,29 +8,69 @@
 	</head>
 	<body>
 		<div class = "page_wrap">
-			<div class = "lesson">Lesson 3 - HTTP Resource Addressing</div>
-			<p>
-			<!-- Put your content ONLY within comment tagss -->
-			<div class = "title1">HTTP Resource Addressing</div>
+			<h1 class = "lesson">Lesson 3 - HTTP Resource Addressing</h1>
+			<h2>HTTP Resource Addressing</h2>
+			<span id = "sample-link">
+			<span id = "scheme">https</span>://<span id = auth>name:pw</span>@<span id = "host">website.com</span>:<span id = "port">2000</span>/<span id = "path">bank/accounts.txt</span>;<span id = "parameters">sessionid=289?</span><span id = "query">cat=imp&name=dan</span><span id ="fragment">#history</span>
+			</span>
 			<ul>
+				<li>HTTP resources are identified using URIs (specifically, HTTP URLs)</li>
+				<ul>
+					<li>Scheme <span id = "scheme">(http)</span></li>
+					<ul>
+						<li>Could either be http: or https:</li>
+					</ul>
+					<li>Authentication information <span id = "auth">(name:pw)</span></li>
+					<ul>
+						<li>Optional</li>
+					</ul>
+					<li>Host <span id = "host">(website.com)</span></li>
+					<ul>
+						<li>Optional</li>
+					</ul>
+					<li>Port number <span id = "port">(2000)</span></li>
+					<ul>
+						<li>Optional</li>
+					</ul>
+					<li>Path to the resource <span id = "path">bank/accounts.txt</span></li>
+					<ul>
+						<li>States the location of the file on the document root of the server</li>
+					</ul>
+					<li>Scheme-specific parameters <span id = "parameters">sessionid=289?</span></li>
+					<ul>
+						<li>Optional</li>
+					</ul>
+					<li>URL-encoded query <span id = "query">cat=imp&name=dan</span></li>
+					<ul>
+						<li>Optional</li>
+					</ul>
+					<li>Fragment <span id = "query">cat=imp&name=dan</span></li>
+					<ul>
+						<li>A fragment or a bookmark</li>
+						<li>Generally used to identify headings for easier navigation</li>
+					</ul>
+				</ul>
 			</ul>
-			</p>
 		</div>
 		<aside class="sidebar">
-		<div class="nav" id="nav">
-			<ul>
-			<li>
-				<div>
-				<a class="main-link">Prelims</a>
-					<a href="p-lesson1.html" class="sub-link">Lesson 1 - The Web VS. The Internet</a>
-					<a href="p-lesson2.html" class="sub-link">Lesson 2 - The Hypertext Transfer Protocol</a>
-					<a href="p-lesson3.html" class="sub-link">Lesson 3 - HTTP Resource Addressing</a>
-				</div>
-				<a class="main-link">Midterms</a>
-				<a class="main-link">Finals</a>
-			</li>
-			</ul>
-		</div>
+			<div class="nav" id="nav">
+				<ul>
+				<li>
+					<div>
+					<a class="main-link">Prelims</a>
+						<a href="p-lesson1.html" class="sub-link">Lesson 1 - The Web VS. The Internet</a>
+						<a href="p-lesson2.html" class="sub-link">Lesson 2 - The Hypertext Transfer Protocol</a>
+						<a href="p-lesson3.html" class="sub-link">Lesson 3 - HTTP Resource Addressing</a>
+						<a href="p-lesson4.html" class="sub-link">Lesson 4 - HTTP Response Messages</a>
+						<a href="p-lesson5.html" class="sub-link">Lesson 5 - HTTP Request Methods</a>
+						<a href="p-lesson6.html" class="sub-link">Lesson 6 - HTTP Message Headers</a>
+						<a href="p-lesson7.html" class="sub-link">Lesson 7 - HTTP Status Codes</a>
+					</div>
+					<a class="main-link">Midterms</a>
+					<a class="main-link">Finals</a>
+				</li>
+				</ul>
+			</div>
 	</aside>
 	</body>
 </html>
