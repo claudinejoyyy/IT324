@@ -45,7 +45,7 @@ h1.title{
 	letter-spacing: 20px;
 }
 
-div.lesson{
+h1.lesson{
 	background-color: #4EEE94;
 	font-size: 2.5em;
 	color: white;
@@ -55,19 +55,30 @@ div.lesson{
 	outline: #32CD32 dotted thin;
 }
 
-div.title1{
+h2{
 	color: gray;
 	padding-left: 30px;
 	margin-top: 30px;
-	font-size: 30px;
+	font-size: 35px;
 }
-div.title2{
+h3{
 	color: gray;
 	padding-left: 40px;
 	margin-top: 30px;
 	font-size: 25px;
 }
 
+h4{
+	margin-top: 10px;
+	margin-bottom: 0px;
+	color: gray;
+	padding-left: 40px;
+	font-size: 20px;
+}
+
+hr {
+	margin-top: 30px;
+}
 
 hr {
 	margin-top: 30px;
@@ -75,14 +86,6 @@ hr {
 
 ul {
 	margin-left: 80px;
-}
-
-ul.title3 {
-	margin-left: 80px;
-	color: gray;
-	padding-left: 30px;
-	margin-top: 30px;
-	font-size: 30px;
 }
 
 li {
@@ -124,6 +127,14 @@ div.page_wrap {
 
 div.content {
 	width: auto;
+}
+
+a:visited { 
+    color: teal;
+	text-decoration: underline;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 .sidebar {
@@ -189,10 +200,4 @@ div.content {
 	margin-bottom: 0;
 	text-align: left;
 }
-a:visited { 
-    color: teal;
-	text-decoration: underline;
-}
-a:hover {
-  text-decoration: underline;
-}
+
