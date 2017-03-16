@@ -18,24 +18,76 @@
 				<li>This class of status code indicates a provisional response, consisting only of the Status-Line and optional headers, and is terminated by an empty line.</li>
 			</ul>
 			<table>
-				<tr><th>Status ID</th><th>Status name</th><th>Description</th></tr>
-				<tr><td>100</td><td>Continue</td>			<td>used to inform the client that the initial part of the request has been received and has not yet been rejected by the server.</td></tr>
-				<tr><td>101</td><td>Switching Protocols</td>		<td>server understands and is willing to comply with the client's request, via the Upgrade message header field for a change in the application protocol being used</td></tr>
+				<tr>
+					<td>
+						<details>
+								<summary>100 Continue</summary>
+								<p>used to inform the client that the initial part of the request has been received and has not yet been rejected by the server.</p>
+						</details>
+					</td>
+						
+					<td>
+						<details>
+							<summary>101 Switching Protocols</summary>
+							<p>server understands and is willing to comply with the client's request, via the Upgrade message header field for a change in the application protocol being used.</p>
+						</details>
+					</td>
+				</tr>
 			</table>
+			
 			<h3>Success (2xx)</h3>
 			<ul>
 				<li>This class of status code indicates that the client's request was successfully received, understood, and accepted.</li>
 			</ul>
 			<table>
-				<tr><th>Status ID</th><th>Status name</th><th>Description</th></tr>
-				<tr><td>200</td><td>OK</td>					<td> request has succeeded</td></tr>
-				<tr><td>201</td><td>Created</td>				<td>request has been fulfilled and resulted in a new resource being created</td></tr>
-				<tr><td>202</td><td>Accepted</td>				<td>request has been accepted for processing, but the processing has not been completed</td></tr>
-				<tr><td>203</td><td>Non-Authoritative Information</td>		<td>returned metainformation in the entity-header is not the definitive set as available from the origin server, but is gathered from a local or a third-party copy</td></tr>
-				<tr><td>204</td><td>No Content</td>				<td>server has fulfilled the request but does not need to return an entity-body</td></tr>
-				<tr><td>205</td><td>Reset Content</td>				<td>server has fulfilled the request and the user agent should reset the document view which caused the request to be sent</td></tr>
-				<tr><td>206</td><td>Partial Content</td>			<td>server has fulfilled the partial GET request for the resource</td></tr>
+				<tr>
+					<td>
+						<details>
+						<summary>200 OK</summary>
+						<p>request has succeeded</p>
+						</details>
+					</td>
+						
+					<td>
+						<details>
+							<summary>201 Created</summary>
+							<p>request has been fulfilled and resulted in a new resource being created</p>
+						</details>
+					</td>		
+				</tr>
+				
+				<tr>
+					<td>
+						<details>
+						<summary>202 Accepted</summary>
+						<p>request has been accepted for processing, but the processing has not been completed</p>
+						</details>
+					</td>
+					<td>
+						<details>
+						<summary>204 No Content</summary>
+						<p>server has fulfilled the request but does not need to return an entity-body</p>
+						</details>
+					</td>	
+				</tr>
+				
+				<tr>
+					<td>
+						<details>
+						<summary>205 Reset Content</summary>
+						<p>server has fulfilled the request and the user agent should reset the document view which caused the request to be sent</p>
+						</details>
+					</td>
+					
+					<td>
+						<details>
+						<summary>206 Partial Content</summary>
+						<p>server has fulfilled the partial GET request for the resource</p>
+						</details>
+					</td>
+				</tr>
 			</table>
+
 			<h3>Redirection (3xx)</h3>
 			<ul>
 				<li>This class of status code indicates that further action needs to be taken by the user agent in order to fulfill the request.</li>

@@ -32,13 +32,16 @@ p.center {
 }
 
 table {
+	border:solid;
+	margin-top: 10px;
 	margin-left: 40px;
-	border: 1px solid black;
 }
 
+/*Dinelete ko
 th, td {
 	border: 1px solid black;
 }
+*/
 
 h1.title{
 	background-color: teal;
@@ -189,7 +192,7 @@ a:hover {
 .sidebar {
 	width: 336px;
 	background-color: #CCFFCC;
-	position: fixed;
+	position: absolute;
 	top: 0em;
 	left: 1px;
 	padding: 0em 10px .8em;
@@ -250,3 +253,10 @@ a:hover {
 	text-align: left;
 }
 
+summary {
+	color: blue;
+}
+
+td {
+	width:400px;
+}
