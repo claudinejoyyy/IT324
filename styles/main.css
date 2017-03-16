@@ -33,6 +33,11 @@ p.center {
 
 table {
 	margin-left: 40px;
+	border: 1px solid black;
+}
+
+th, td {
+	border: 1px solid black;
 }
 
 h1.title{
