@@ -88,6 +88,57 @@ ul {
 	margin-left: 80px;
 }
 
+#sample-link{
+	text-align: center;
+	display: block;
+	margin: 10px;
+	padding: 10px;
+	font-size: 23px;
+	outline: black dotted thin;
+	background-color: black;
+	color: white;
+}
+
+#scheme{
+	color: red;
+	background-color: black;
+}
+
+#auth {
+	color: orange;
+	background-color: black;
+}
+
+#host {
+	color: yellow;
+	background-color: black;
+}
+
+#port {
+	color: lime;
+	background-color: black;
+}
+
+#path {
+	color: green;
+	background-color: black;
+}
+
+#parameters {
+	color: aqua;
+	background-color: black;
+}
+
+#query {
+	color: blue;
+	background-color: black;
+}
+
+#fragment {
+	color: violet;
+	background-color: black;
+}
+
 img.block {
 	margin: auto;
 	display: block;
