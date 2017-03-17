@@ -93,53 +93,301 @@
 				<li>This class of status code indicates that further action needs to be taken by the user agent in order to fulfill the request.</li>
 			</ul>
 			<table>
-				<tr><th>Status ID</th><th>Status name</th><th>Description</th></tr>
-				<tr><td>300</td><td>Multiple Choices</td>		<td>requested resource corresponds to any one of a set of representations, each with its own specific location, and agent-driven negotiation information is being provided so that the user can select a preferred representation and redirect its request to that location</td></tr>
-				<tr><td>301</td><td>Moved Permanently</td>		<td>requested resource has been assigned a new permanent URI and any future references to this resource should use one of the returned URIs</td></tr>
-				<tr><td>302</td><td>Found</td>				<td>requested resource resides temporarily under a different URI</td></tr>
-				<tr><td>303</td><td>See Other</td>			<td>response to the request can be found under a different URI and should be retrieved using a GET method on that resource</td></tr>
-				<tr><td>304</td><td>Not Modified</td>			<td>the client has performed a conditional GET request and access is allowed, but the document has not been modified</td></tr>
-				<tr><td>305</td><td>Use Proxy</td>			<td> requested resource must be accessed through the proxy given by the location field</td></tr>
-				<tr><td>306</td><td>(Unused)</td>			<td>is no longer used and the code is reserved</td></tr>
-				<tr><td>307</td><td>Temporary Redirect</td>		<td>requested resource resides temporarily under a different URI</td></tr>
+        
+                <tr>
+					<td>
+						<details>
+						<summary>300 Multiple Choices</summary>
+						<p>requested resource corresponds to any one of a set of representations, each with its own specific location, and agent-driven negotiation information is being provided so that the user can select a preferred representation and redirect its request to that location</p>
+						</details>
+					</td>
+						
+					<td>
+						<details>
+							<summary>301 Moved Permanently</summary>
+							<p>requested resource has been assigned a new permanent URI and any future references to this resource should use one of the returned URIs</p>
+						</details>
+					</td>		
+				</tr>
+				
+				<tr>
+					<td>
+						<details>
+						<summary>302 Found</summary>
+						<p>requested resource resides temporarily under a different URI</p>
+						</details>
+					</td>
+                    
+                
+					<td>
+						<details>
+						<summary>303 See Other</summary>
+						<p>response to the request can be found under a different URI and should be retrieved using a GET method on that resource.</p>
+						</details>
+					</td>	
+				</tr>
+				
+				<tr>
+                    
+					<td>
+						<details>
+						<summary>304 Not Modified</summary>
+						<p>the client has performed a conditional GET request and access is allowed, but the document has not been modified</p>
+						</details>
+					</td>
+					
+					<td>
+						<details>
+						<summary>305 Use Proxy</summary>
+						<p>requested resource must be accessed through the proxy given by the location field</p>
+						</details>
+					</td>
+				</tr>
+            
+            	<tr>
+                    
+                            
+					<td>
+						<details>
+						<summary>306 (Unused)</summary>
+						<p>is no longer used and the code is reserved</p>
+						</details>
+					</td>
+					
+					<td>
+						<details>
+						<summary>307 Temporary Redirect</summary>
+						<p>requested resource resides temporarily under a different URI</p>
+						</details>
+					</td>
+				</tr>
+				
 			</table>
 			<h3>Client Error (4xx)</h3>
 			<ul>
 				<li>This class of status code is intended for cases in which the client seems to have erred.</li>
 			</ul>
 			<table>
-				<tr><th>Status ID</th><th>Status name</th><th>Description</th></tr>
-				<tr><td>400</td><td>Bad Request</td>					<td>request could not be understood by the server due to malformed syntax</td></tr>
-				<tr><td>401</td><td>Unauthorized</td>					<td>request requires user authentication</td></tr>
-				<tr><td>402</td><td>Payment Required</td>				<td>too primitive to be useful</td></tr>
-				<tr><td>403</td><td>Forbidden</td>					<td>server understood the request, but is refusing to fulfill it</td></tr>
-				<tr><td>404</td><td>Not Found</td>					<td>server has not found anything matching the Request-URI</td></tr>
-				<tr><td>405</td><td>Method not Allowed</td>				<td>method specified in the Request-Line is not allowed for the resource identified by the Request-URI</td></tr>
-				<tr><td>406</td><td>Not Acceptable</td>					<td>resource identified by the request is only capable of generating response entities which have content characteristics not acceptable according to the accept headers sent in the request</td></tr>
-				<tr><td>407</td><td>Proxy Authentication Required</td>			<td>indicates that the client must first authenticate itself with the proxy</td></tr>
-				<tr><td>408</td><td>Request Timeout</td>				<td>client did not produce a request within the time that the server was prepared to wait</td></tr>
-				<tr><td>409</td><td>Conflict</td>					<td>request could not be completed due to a conflict with the current state of the resource</td></tr>
-				<tr><td>410</td><td>Gone</td>						<td>requested resource is no longer available at the server and no forwarding address is known</td></tr>
-				<tr><td>411</td><td>Length Required</td>				<td>server refuses to accept the request without a defined Content-Length</td></tr>
-				<tr><td>412</td><td>Precondition Failed</td>				<td>precondition given in one or more of the request-header fields evaluated to false when it was tested on the server</td></tr>
-				<tr><td>413</td><td>Request Entity Too Large</td>			<td>server is refusing to process a request because the request entity is larger than the server is willing or able to process</td></tr>
-				<tr><td>414</td><td>Request-URI Too Long</td>				<td>server is refusing to service the request because the Request-URI is longer than the server is willing to interpret</td></tr>
-				<tr><td>415</td><td>Unsupported Media Type</td>				<td>server is refusing to service the request because the entity of the request is in a format not supported by the requested resource for the requested method</td></tr>
-				<tr><td>416</td><td>Request Range Not Satisfiable</td>			<td>request included a Range request-header field and none of the range-specifier values in this field overlap the current extent of the selected resource, and the request did not include an If-Range request-header field</td></tr>
-				<tr><td>417</td><td>Expectation Failed</td>				<td>expectation given in an Expect request-header field could not be met by this server, or, if the server is a proxy, the server has unambiguous evidence that the request could not be met by the next-hop server</td></tr>
+				<tr>
+                    
+                            
+					<td>
+						<details>
+						<summary>400 Bad Request</summary>
+						<p>request could not be understood by the server due to malformed syntax</p>
+						</details>
+					</td>
+					
+					<td>
+						<details>
+						<summary>401 Unauthorized</summary>
+						<p>request requires user authentication</p>
+						</details>
+					</td>
+				</tr>               
+                    <tr>        
+					<td>
+						<details>
+						<summary>402 Payment Required</summary>
+						<p>too primitive to be useful</p>
+						</details>
+					</td>
+					
+					<td>
+						<details>
+						<summary>403 Forbidden</summary>
+						<p>server understood the request, but is refusing to fulfill it</p>
+						</details>
+					</td>
+				</tr>
+                <tr>
+                                         
+					<td>
+						<details>
+						<summary>404 Not Found</summary>
+						<p>server has not found anything matching the Request-URI</p>
+						</details>
+					</td>
+					
+					<td>
+						<details>
+						<summary>405 Method not Allowed</summary>
+						<p>method specified in the Request-Line is not allowed for the resource identified by the Request-URI</p>
+						</details>
+					</td>
+				</tr>
+				
+                <tr>
+                    
+                            
+					<td>
+						<details>
+						<summary>406 Not Acceptable</summary>
+						<p>resource identified by the request is only capable of generating response entities which have content characteristics not acceptable according to the accept headers sent in the request</p>
+						</details>
+					</td>
+					
+					<td>
+						<details>
+						<summary>407 Proxy Authentication Required</summary>
+						<p>indicates that the client must first authenticate itself with the proxy</p>
+						</details>
+					</td>
+				</tr>
+				
+                <tr>
+                    
+                            
+					<td>
+						<details>
+						<summary>408 Request Timeout</summary>
+						<p>client did not produce a request within the time that the server was prepared to wait</p>
+						</details>
+					</td>
+					
+					<td>
+						<details>
+						<summary>409 Conflict</summary>
+						<p>request could not be completed due to a conflict with the current state of the resource</p>
+						</details>
+					</td>
+				</tr>
+                
+                    <tr>
+                    
+                            
+					<td>
+						<details>
+						<summary>410 Gone</summary>
+						<p>requested resource is no longer available at the server and no forwarding address is known</p>
+						</details>
+					</td>
+					
+					<td>
+						<details>
+						<summary>411 Length Required</summary>
+						<p>server refuses to accept the request without a defined Content-Length</p>
+						</details>
+					</td>
+				</tr>
+                
+	
+                    <tr>
+                    
+                            
+					<td>
+						<details>
+						<summary>412 Precondition Failed</summary>
+						<p>precondition given in one or more of the request-header fields evaluated to false when it was tested on the server</p>
+						</details>
+					</td>
+					
+					<td>
+						<details>
+						<summary>413 Request Entity Too Large</summary>
+						<p>server is refusing to process a request because the request entity is larger than the server is willing or able to process</p>
+						</details>
+					</td>
+				</tr>
+                
+			
+                    <tr>
+                    
+                            
+					<td>
+						<details>
+						<summary>414 Request-URI Too Long</summary>
+						<p>server is refusing to service the request because the Request-URI is longer than the server is willing to interpret</p>
+						</details>
+					</td>
+					
+					<td>
+						<details>
+						<summary>415 Unsupported Media Type</summary>
+						<p>server is refusing to service the request because the entity of the request is in a format not supported by the requested resource for the requested method</p>
+						</details>
+					</td>
+				</tr>
+                
+				
+                    <tr>
+                    
+                            
+					<td>
+						<details>
+						<summary>416 Request Range Not Satisfiable</summary>
+						<p>request included a Range request-header field and none of the range-specifier values in this field overlap the current extent of the selected resource, and the request did not include an If-Range request-header field</p>
+						</details>
+					</td>
+					
+					<td>
+						<details>
+						<summary>417 Expectation Failed</summary>
+						<p>expectation given in an Expect request-header field could not be met by this server, or, if the server is a proxy, the server has unambiguous evidence that the request could not be met by the next-hop server</p>
+						</details>
+					</td>
+				</tr>
+                
 			</table>
 			<h3>Server Error (5xx)</h3>
 			<ul>
 				<li>This class of status code indicate cases in which the server is aware that it has erred or is incapable of performing the request.</li>
 			</ul>
 			<table>
-				<tr><th>Status ID</th><th>Status name</th><th>Description</th></tr>
-				<tr><td>500</td><td>Internal Server Error</td>			<td>server encountered an unexpected condition which prevented it from fulfilling the request</td></tr>
-				<tr><td>501</td><td>Not Implemented</td>			<td> server does not support the functionality required to fulfill the request</td></tr>
-				<tr><td>502</td><td>Bad Gateway</td>				<td>the server, while acting as a gateway or proxy, received an invalid response from the upstream server it accessed in attempting to fulfill the request</td></tr>
-				<tr><td>503</td><td>Service Unavailable</td>			<td>server is currently unable to handle the request due to a temporary overloading or maintenance </td></tr>
-				<tr><td>504</td><td>Gateway Timeout</td>			<td>The server, while acting as a gateway or proxy, did not receive a timely response from the upstream server specified by the URI or some other auxiliary server it needed to access in attempting to complete the request</td></tr>
-				<tr><td>505</td><td>HTTP Version Not Supported</td>		<td>server does not support, or refuses to support, the HTTP protocol version that was used in the request message</td></tr>
+                  <tr>
+                    
+                            
+					<td>
+						<details>
+						<summary>500 Internal Server Error</summary>
+						<p>server encountered an unexpected condition which prevented it from fulfilling the request</p>
+						</details>
+					</td>
+					
+					<td>
+						<details>
+						<summary>501 Not Implemented</summary>
+						<p>server does not support the functionality required to fulfill the request</p>
+						</details>
+					</td>
+				</tr>
+                
+                
+                  <tr>
+                    
+                            
+					<td>
+						<details>
+						<summary>502 Bad Gateway</summary>
+						<p>the server, while acting as a gateway or proxy, received an invalid response from the upstream server it accessed in attempting to fulfill the request</p>
+						</details>
+					</td>
+					
+					<td>
+						<details>
+						<summary>503 Service Unavailable</summary>
+						<p>server is currently unable to handle the request due to a temporary overloading or maintenance</p>
+						</details>
+					</td>
+				</tr>
+               
+                  <tr>
+                    
+                            
+					<td>
+						<details>
+						<summary>504 Gateway Timeout</summary>
+						<p>The server, while acting as a gateway or proxy, did not receive a timely response from the upstream server specified by the URI or some other auxiliary server it needed to access in attempting to complete the request</p>
+						</details>
+					</td>
+					
+					<td>
+						<details>
+						<summary>505 HTTP Version Not Supported</summary>
+						<p>server does not support, or refuses to support, the HTTP protocol version that was used in the request message</p>
+						</details>
+					</td>
+				</tr>
 			</table>
 		</div>
 		<aside class="sidebar">
