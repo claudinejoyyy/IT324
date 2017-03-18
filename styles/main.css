@@ -185,6 +185,12 @@ a:visited {
     	color: teal !important;
 	text-decoration: underline;
 }
+
+.nav ul li a.sub-link:hover{
+	background-color: SlateBlue;
+	color: white !important
+}
+
 a:hover {
  	text-decoration: underline;
 }
@@ -259,4 +265,28 @@ summary {
 
 td {
 	width:400px;
+}
+
+#prelims-content {
+    display: none;
+}
+    
+#prelims:hover > #prelims-content {
+    display: block;
+}
+
+#midterms-content {
+    display: none;
+}
+    
+#midterms:hover > #midterms-content {
+    display: block;
+}
+
+#finals-content {
+    display: none;
+}
+    
+#finals:hover > #finals-content {
+    display: block;
 }
