@@ -1,0 +1,274 @@
+html, div, span, applet, object, iframe,
+h2, h3, h5, h6, p, blockquote, pre,
+a, abbr, abbr, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+caption, tbody, tfoot, thead{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-family:inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+html {
+	background-color:  #E5E4E2;
+}
+
+p{
+	background-color:  #E5E4E2;
+	color: #102342;
+	padding: 30px;
+}
+
+p.center {
+	text-align: center;
+}
+
+table {
+	border:solid;
+	margin-top: 10px;
+	margin-left: 40px;
+}
+
+/*Dinelete ko
+th, td {
+	border: 1px solid black;
+}
+*/
+
+h1.title{
+	background-color: teal;
+	color: white;
+	width: 940px;
+	padding: 30px;
+	text-align: center;
+	outline: #32CD32 dotted thin;
+	letter-spacing: 20px;
+}
+
+h1.lesson{
+	background-color: #0e2f63;
+	font-size: 2.5em;
+	color: white;
+	width: 100%;
+	margin:0;
+	padding-top:2%;
+	padding-bottom:2%;
+	text-align: center;
+}
+
+h2{
+	color:  #3B3131;
+	padding-left: 30px;
+	margin-top: 30px;
+	font-size: 35px;
+}
+h3{
+	color: black;
+	padding-left: 40px;
+	margin-top: 30px;
+	font-size: 25px;
+}
+
+h4{
+	margin-top: 10px;
+	margin-bottom: 0px;
+	color: #3B3131;
+	padding-left: 40px;
+	font-size: 20px;
+}
+
+hr {
+	margin-top: 30px;
+}
+
+hr {
+	margin-top: 30px;
+}
+
+ul {
+    color:#3a3f47;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+#sample-link{
+	text-align: center;
+	display: block;
+	margin: 10px;
+	padding: 10px;
+	font-size: 23px;
+	outline: black dotted thin;
+	background-color: black;
+	color: white;
+}
+
+#scheme{
+	color: red;
+	background-color: black;
+}
+
+#auth {
+	color: orange;
+	background-color: black;
+}
+
+#host {
+	color: yellow;
+	background-color: black;
+}
+
+#port {
+	color: lime;
+	background-color: black;
+}
+
+#path {
+	color: green;
+	background-color: black;
+}
+
+#parameters {
+	color: aqua;
+	background-color: black;
+}
+
+#query {
+	color: blue;
+	background-color: black;
+}
+
+#fragment {
+	color: violet;
+	background-color: black;
+}
+
+img.block {
+	margin: auto;
+	display: block;
+	align: center;
+}
+
+img.inline-img {
+	display: inline;
+	margin: 10px;
+	margin-left: 40px;
+	padding-right: 35px;
+	height: 100px;
+	float: left;
+}
+
+#quote {
+	color: black;
+	text-align: right;
+}
+
+div.page_wrap {
+	font-size: 20px;
+	margin-left: 23%;
+	width: 77%;
+
+	background-color: #BCC6CC;
+	padding:0;
+}
+
+div.content {
+	width: auto;
+}
+
+a:visited {
+    	color: teal !important;
+	text-decoration: underline;
+}
+a:hover {
+ 	text-decoration: underline;
+}
+
+.sidebar {
+	width: 21%;
+	height:100%;
+	background-color: beige;
+	position: absolute;
+	top: 0em;
+	left: 1px;
+	padding: 0em 10px .8em;
+	color: antiquewhite;
+	outline: #4AC948 dotted thin;
+}
+
+.sidebar a {
+	color: antiquewhite;
+	text-decoration: none;
+}
+
+.sidebar h2 {
+	display: block;
+}
+
+.sidebar ul {
+	margin: 0 0 2.4em;
+	font-size: 1.25em;
+	text-align: center;
+	line-height: 1.2em;
+
+}
+
+.sidebar ul li {
+	margin-bottom: .8em;
+	text-align: center;
+}
+
+.nav h2 {
+	background-image: url("../resources/snail.png");
+}
+
+.nav ul li {
+	margin: 0 0 1.2em;
+
+}
+
+.nav ul li a {
+	display: block;
+	padding: .5em 5px .6em;
+	margin-bottom: .3em;
+	font-size: 1.00em;
+}
+
+.nav ul li a.main-link{
+	outline: teal dotted thin;
+	background-color: #2C3539;
+	margin-top: 20px;
+}
+
+.nav ul li a.sub-link {
+	background-color: #C0C0C0;
+	display: block;
+	padding: 0;
+	font-size: 0.75em;
+	margin-bottom: 0;
+	text-align: left;
+}
+
+summary {
+	color: blue;
+}
+
+td {
+	width:400px;
+}
+
+tr{
+    width:100%;
+    padding:5%;
+}
+
+.side{
+    padding:2%;
+}
