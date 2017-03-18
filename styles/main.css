@@ -18,11 +18,11 @@ caption, tbody, tfoot, thead{
 }
 
 html {
-	background-color: #F0FFF0;
+	background-color:  #E5E4E2;
 }
 
 p{
-	background-color: #98FB98;
+	background-color:  #E5E4E2;
 	color: gray;
 	padding: 30px;
 }
@@ -54,7 +54,7 @@ h1.title{
 }
 
 h1.lesson{
-	background-color: #4EEE94;
+	background-color: black;
 	font-size: 2.5em;
 	color: white;
 	width: 940px;
@@ -64,13 +64,13 @@ h1.lesson{
 }
 
 h2{
-	color: gray;
+	color:  #3B3131;
 	padding-left: 30px;
 	margin-top: 30px;
 	font-size: 35px;
 }
 h3{
-	color: gray;
+	color: #3B3131;
 	padding-left: 40px;
 	margin-top: 30px;
 	font-size: 25px;
@@ -79,7 +79,7 @@ h3{
 h4{
 	margin-top: 10px;
 	margin-bottom: 0px;
-	color: gray;
+	color: #3B3131;
 	padding-left: 40px;
 	font-size: 20px;
 }
@@ -173,7 +173,7 @@ div.page_wrap {
 	margin-bottom: 50px;
 	margin-left: 350px;
 	width: 1000px;
-	background-color: #98FB98;
+	background-color: #BCC6CC;
 	padding-bottom: 50px;
 }
 
@@ -191,17 +191,17 @@ a:hover {
 
 .sidebar {
 	width: 336px;
-	background-color: #CCFFCC;
+	background-color: beige;
 	position: absolute;
 	top: 0em;
 	left: 1px;
 	padding: 0em 10px .8em;
-	color: white;
+	color: antiquewhite;
 	outline: #4AC948 dotted thin;
 }
 
 .sidebar a { 
-	color: green;
+	color: antiquewhite;
 	text-decoration: none;	
 }
 
@@ -239,13 +239,13 @@ a:hover {
 }
 
 .nav ul li a.main-link{
-	outline: #32CD32 dotted thin;
-	background-color: #98ff98;
+	outline: teal dotted thin;
+	background-color: #2C3539;
 	margin-top: 20px;
 }
 
 .nav ul li a.sub-link {
-	background-color: #CCFFCC;
+	background-color: #C0C0C0;
 	display: block;
 	padding: 0;
 	font-size: 0.75em;
