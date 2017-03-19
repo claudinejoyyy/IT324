@@ -40,11 +40,12 @@ p{
 
 p.center {
 	text-align: center;
-	background-color:#BCC6CC;
+	background-color:#BCC7AC;
 }
 
 p.left {
 	text-align: left;
+	background-color: #BCC7AC
 }
 
 table {
@@ -62,26 +63,30 @@ th, td {
 h1.title{
 	background-color: teal;
 	color: white;
-	width: 975px;
+	width: 940px;
 	padding: 30px;
 	text-align: center;
 	outline: #32CD32 dotted thin;
 	letter-spacing: 20px;
 	font-family: "PCBius";
 	font-size: 5em;
+	margin-bottom:10px;
+	border:solid;
 }
 
 h1.lesson{
 	background-color: gray;
 	font-size: 2.5em;
 	color: white;
-	width: 980px;
+	width: 935px;
 	padding: 30px;
 	text-align: center;
 	outline: #32CD32 dotted thin;
 }
 
 h2{
+	border:solid;
+	border-color:white;
 	color:  #3B3131;
 	padding-left: 30px;
 	margin-top: 30px;
@@ -90,6 +95,7 @@ h2{
 
 h2.center {
 	text-align: center;
+	background-color: teal;
 }
 
 h3{
@@ -203,10 +209,9 @@ div.page_wrap {
 	margin-top: 50px;
 	margin-bottom: 50px;
 	margin-left: 350px;
-	width: 1020px;
-	background-color: #BCC6CC;
+	width: 1000px;
+	background-color: #E5E4E2;
 	padding-bottom: 50px;
-	padding-right: 20px;
 }
 
 div.content {
@@ -293,12 +298,6 @@ a:hover {
 
 summary {
 	color: blue;
-	
-}
-
-summary.references {
-	margin-top: 50px;
-	text-align: center;
 }
 
 td {
