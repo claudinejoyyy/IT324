@@ -40,13 +40,14 @@ p{
 
 p.center {
 	text-align: center;
-	background-color:#BCC7AC;
+	background-color:#B0B7B6;
 }
 
 p.left {
-	background-color:#BCC7AC;
+	background-color:#B0B7B6;
 	text-align: left;
 	margin-bottom:0;
+	color: #303535;
 }
 
 table {
