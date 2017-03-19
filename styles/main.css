@@ -61,7 +61,7 @@ th, td {
 h1.title{
 	background-color: teal;
 	color: white;
-	width: 930px;
+	width: 975px;
 	padding: 30px;
 	text-align: center;
 	outline: #32CD32 dotted thin;
@@ -74,7 +74,7 @@ h1.lesson{
 	background-color: gray;
 	font-size: 2.5em;
 	color: white;
-	width: 935px;
+	width: 980px;
 	padding: 30px;
 	text-align: center;
 	outline: #32CD32 dotted thin;
@@ -202,9 +202,10 @@ div.page_wrap {
 	margin-top: 50px;
 	margin-bottom: 50px;
 	margin-left: 350px;
-	width: 1000px;
+	width: 1020px;
 	background-color: #BCC6CC;
 	padding-bottom: 50px;
+	padding-right: 20px;
 }
 
 div.content {
@@ -291,6 +292,12 @@ a:hover {
 
 summary {
 	color: blue;
+	
+}
+
+summary.references {
+	margin-top: 50px;
+	text-align: center;
 }
 
 td {
