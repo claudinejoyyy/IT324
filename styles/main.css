@@ -51,7 +51,9 @@ p.center {
 p.left {
 	padding-top:20px;
 	padding-bottom:20px;
-	width:100%;
+	width:96%;
+	padding-right:1%;
+	padding-left:3%;
 	background-color:#B0B7B6;
 	text-align: left;
 	margin-bottom:0;
