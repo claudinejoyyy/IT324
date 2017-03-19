@@ -86,10 +86,11 @@ h1.title{
 
 h1.lesson{
 	background-color: gray;
-	font-size: 2.5em;
+	font-size: 2.3em;
 	color: white;
 	width: 100%;
-	padding: 30px;
+	padding-top:2%;
+	padding-bottom:2%;
 	text-align: center;
 	outline: #32CD32 dotted thin;
 	margin-top:0;
@@ -220,6 +221,7 @@ div.page_wrap {
 	margin-bottom: 50px;
 	margin-left: 25%;
 	width: 75%;
+	background-color: #BCC6CC;
 	padding-bottom: 50px;
 }
 
