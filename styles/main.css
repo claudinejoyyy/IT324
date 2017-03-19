@@ -40,10 +40,11 @@ p{
 
 p.center {
 	text-align: center;
+	background-color:#BCC6CC;
 }
 
-p.right {
-	text-align: right;
+p.left {
+	text-align: left;
 }
 
 table {
