@@ -101,6 +101,7 @@ h1.lesson{
 h2{
 	color:  #3B3131;
 	margin-top: 30px;
+	margin-left: 10px;
 	font-size: 35px;
 }
 
@@ -115,6 +116,7 @@ h3{
 	color: #3B3131;
 	padding-left: 40px;
 	margin-top: 30px;
+	margin-left: 10px;
 	font-size: 25px;
 }
 
@@ -125,6 +127,7 @@ h3.additional {
 h4{
 	margin-top: 10px;
 	margin-bottom: 0px;
+	margin-left: 10px;
 	color: #3B3131;
 	padding-left: 40px;
 	font-size: 20px;
@@ -138,8 +141,14 @@ hr {
 	margin-top: 30px;
 }
 
-ul {
+ul, ol {
 	margin-left: 80px;
+	
+}
+
+emp {
+	font-weight: bold;
+	color: #00001a;
 }
 
 ul.content {
