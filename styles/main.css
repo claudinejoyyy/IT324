@@ -17,8 +17,19 @@ caption, tbody, tfoot, thead{
 	vertical-align: baseline;
 }
 
-html {
+@font-face{
+	font-family: "A Little Sunshine";
+	src:url("font/A Little Sunshine.ttf");
+}
+
+@font-face{
+	font-family: "PCBius";
+	src:url("font/PCBius.ttf");
+}
+
+html, body {
 	background-color:  #E5E4E2;
+	font-family: georgia;
 }
 
 p{
@@ -46,18 +57,20 @@ th, td {
 h1.title{
 	background-color: teal;
 	color: white;
-	width: 940px;
+	width: 930px;
 	padding: 30px;
 	text-align: center;
 	outline: #32CD32 dotted thin;
 	letter-spacing: 20px;
+	font-family: "PCBius";
+	font-size: 5em;
 }
 
 h1.lesson{
-	background-color: black;
+	background-color: gray;
 	font-size: 2.5em;
 	color: white;
-	width: 940px;
+	width: 935px;
 	padding: 30px;
 	text-align: center;
 	outline: #32CD32 dotted thin;
@@ -74,6 +87,10 @@ h3{
 	padding-left: 40px;
 	margin-top: 30px;
 	font-size: 25px;
+}
+
+h3.additional {
+	font-family: "A Little Sunshine";
 }
 
 h4{
@@ -94,6 +111,10 @@ hr {
 
 ul {
 	margin-left: 80px;
+}
+
+ul.content {
+	font-family: verdana;
 }
 
 #sample-link{
@@ -182,7 +203,7 @@ div.content {
 }
 
 a:visited { 
-    	color: teal !important;
+    color: teal !important;
 	text-decoration: underline;
 }
 
