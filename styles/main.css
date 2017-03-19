@@ -82,6 +82,11 @@ h2{
 	margin-top: 30px;
 	font-size: 35px;
 }
+
+h2.center {
+	text-align: center;
+}
+
 h3{
 	color: #3B3131;
 	padding-left: 40px;
