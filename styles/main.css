@@ -42,6 +42,10 @@ p.center {
 	text-align: center;
 }
 
+p.right {
+	text-align: right;
+}
+
 table {
 	border:solid;
 	margin-top: 10px;
