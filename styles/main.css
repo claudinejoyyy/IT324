@@ -254,6 +254,52 @@ a:hover {
  	text-decoration: underline;
 }
 
+ul.nextprev {
+	list-style-type: none;
+	margin-top: 20px;
+	color: gray;
+	display: block;
+	text-align: center;
+}
+
+summary {
+	color: blue;
+	
+}
+
+summary.references {
+	margin-top: 50px;
+	text-align: center;
+}
+
+td {
+	width:400px;
+}
+
+#prelims-content {
+    display: none;
+}
+    
+#prelims:hover > #prelims-content {
+    display: block;
+}
+
+#midterms-content {
+    display: none;
+}
+    
+#midterms:hover > #midterms-content {
+    display: block;
+}
+
+#finals-content {
+    display: none;
+}
+    
+#finals:hover > #finals-content {
+    display: block;
+}
+
 .sidebar {
 	width: 23%;
 	background-color: #79B0AA;
@@ -316,42 +362,4 @@ a:hover {
 	font-size: 0.75em;
 	margin-bottom: 0;
 	text-align: left;
-}
-
-summary {
-	color: blue;
-	
-}
-
-summary.references {
-	margin-top: 50px;
-	text-align: center;
-}
-
-td {
-	width:400px;
-}
-
-#prelims-content {
-    display: none;
-}
-    
-#prelims:hover > #prelims-content {
-    display: block;
-}
-
-#midterms-content {
-    display: none;
-}
-    
-#midterms:hover > #midterms-content {
-    display: block;
-}
-
-#finals-content {
-    display: none;
-}
-    
-#finals:hover > #finals-content {
-    display: block;
 }
