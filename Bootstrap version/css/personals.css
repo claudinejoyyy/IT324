@@ -1,0 +1,49 @@
+hr {
+	margin-top: 50px;
+	margin-bottom: 50px;
+
+}
+
+.tm-banner-small {
+	height: 200px;
+	padding: 30px;
+}
+
+ul.bullet-less {
+	list-style: none;
+}
+
+ul, ol {
+	margin-left: 40px;
+}
+
+h2{
+	color:  #3B3131;
+	margin-left: 10px;
+}
+
+h3{
+	margin-top: 30px;
+	margin-left: 10px;
+}
+
+h4{
+	margin-top: 30px;
+	margin-bottom: 0px;
+	margin-left: 10px;
+}
+
+emp {
+	font-weight: bold;
+	color: #00001a;
+}
+
+img.inline-img {
+	display: inline;
+	float: left;
+}
+
+details {
+	display: block;
+	width: 100%;
+}
