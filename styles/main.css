@@ -266,6 +266,10 @@ summary {
 	color: blue;
 	
 }
+p.CSS{
+		background-color: #BCC6CC;
+		color: black;
+}
 
 summary.references {
 	margin-top: 50px;
