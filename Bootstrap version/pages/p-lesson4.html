@@ -28,128 +28,154 @@
   </head>
   <body>
     <div class="container">
-      <div class="tm-sidebar">
-        <a href = "../index.html"><img src="../img/menu-top.png" alt="Menu top image" class="img-fluid tm-sidebar-image"></a>
-        <nav class="tm-main-nav">
-          <ul>
-            <li class="tm-nav-item"><a href="#home" class="tm-nav-item-link" target = "_blank">Home</a></li>
-            <li class="tm-nav-item"><a href="#prelims" class="tm-nav-item-link">Prelims</a></li>
-            <li class="tm-nav-item"><a href="#midterms" class="tm-nav-item-link">Midterms</a></li>
-            <li class="tm-nav-item"><a href="#finals" class="tm-nav-item-link">Finals</a></li>
+    <div class="tm-sidebar">
+      <a href = "../index.html"><img src="../img/menu-top.png" alt="Menu top image" class="img-fluid tm-sidebar-image"></a>
+      <nav class="tm-main-nav">
+        <ul>
+          <li class="tm-nav-item"><a href="#home" class="tm-nav-item-link" target = "_blank">Home</a></li>
+          <li class="tm-nav-item"><a href="#prelims" class="tm-nav-item-link">Prelims</a></li>
+          <li class="tm-nav-item"><a href="#midterms" class="tm-nav-item-link">Midterms</a></li>
+          <li class="tm-nav-item"><a href="#finals" class="tm-nav-item-link">Finals</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="tm-main-content">
+    <section id="home" class="tm-content-box tm-banner-small margin-b-10">
+      <div class="tm-banner-inner">
+        <h1 class="tm-banner-title">Lesson 4</h1>
+        <p class="tm-banner-text">HTTP Request Message</p>
+      </div>
+    </section>
+    <section>
+      <div class="tm-content-box">
+        <div class="pad ">
+          <h2>HTTP Request Message</h2>
+          <img src = "../img/request-message.png" class = "block" alt = "response messages">
+          <h3>Request Line</h3>
+          <ul class = "content">
+            <li>The first line of the header is called the request line, followed by optional request headers.</li>
+            <ul class = "content">
+              <li>
+                The request line has the following syntax: 
+                <emp>request-method-name request-URI HTTP-version</emp>
+              </li>
+              <ul class = "content">
+                <li>
+                  <emp>request-method-name</emp>
+                  : HTTP protocol defines a set of request methods, e.g., GET, POST, HEAD, and OPTIONS. The client can use one of these methods to send a request to the server.
+                </li>
+                <li>
+                  <emp>request-URI</emp>
+                  : specifies the resource requested.
+                </li>
+                <li>
+                  <emp>HTTP-version</emp>
+                  : the version of the HTTP being used
+                </li>
+              </ul>
+            </ul>
           </ul>
-        </nav>
-      </div>
-      <div class="tm-main-content">
-        <section id="home" class="tm-content-box tm-banner-small margin-b-10">
-          <div class="tm-banner-inner">
-            <h1 class="tm-banner-title">Lesson 4</h1>
-            <p class="tm-banner-text">HTTP Request Message</p>
-          </div>
-        </section>
-        <section>
-          <div class="tm-content-box">
-            <div class="pad ">
-             <h2>HTTP Request Message</h2>
-			<img src = "../img/request-message.png" class = "block" alt = "response messages">
-			<h3>Request Line</h3>
-			<ul class = "content">
-				<li>The first line of the header is called the request line, followed by optional request headers.</li>
-				<ul class = "content">
-					<li>The request line has the following syntax: <emp>request-method-name request-URI HTTP-version</emp></li>
-					<ul class = "content">
-						<li><emp>request-method-name</emp>: HTTP protocol defines a set of request methods, e.g., GET, POST, HEAD, and OPTIONS. The client can use one of these methods to send a request to the server.</li>
-						<li><emp>request-URI</emp>: specifies the resource requested.</li>
-						<li><emp>HTTP-version</emp>: the version of the HTTP being used</li>
-					</ul>
-				</ul>
-			</ul>
-			<h3><a href="p-lesson5.html">Request Headers</a></h3>
-			<ul class = "content">
-				<li>The request headers/request methods are in the form of name:value pairs.</li>
-				<li>Multiple values, separated by commas, can be specified using
-					request-header-name: request-header-value1, request-header-value2, ...</li>
-			</ul>
-			<hr>
-			<h2>HTTP Response Message</h2>
-			<img src = "../img/response-message.png" class = "block" alt = "response messages">
-			<h3>Status Line</h3>
-			<ul class = "content">
-				<li>The first line is called the status line, followed by optional response header(s).</li>
-				<ul class = "content">
-					<li>The status line has the following syntax: <emp>HTTP-version status-code reason-phrase</emp></li>
-					<ul class = "content">
-						<li><emp>HTTP-version</emp>: The HTTP version used in this session. Either HTTP/1.0 and HTTP/1.1.</li>
-						<li><emp><a href="p-lesson7.html">status-code</a></emp>: a 3-digit number generated by the server to reflect the outcome of the request.</li>
-						<li><emp>reason-phrase</emp>: gives a short explanation to the status code.</li>
-					</ul>
-				</ul>
-			</ul>
-			<h3><a href="p-lesson6.html">Response Headers</a></h3>
-			<ul class = "content">
-				<li>The response headers are in the form name:value pairs: response-header-name: response-header-value1, response-header-value2, ...</li>
-				<li>Multiple values, separated by commas, can be specified using
-					request-header-name: request-header-value1, request-header-value2, ...</li>
-			</ul>
-			<h3>Response Message Body</h3>
-			<ul class = "content">
-				<li>The response message body contains the resource data requested.</li>
-			</ul>
-			<hr>
-		<details>
-		<summary class = "references">References</summary>
-		https://www.ntu.edu.sg/home/ehchua/programming/webprogramming/HTTP_Basics.html
-		</details>
-			Previous: <a href="p-lesson3.html">Lesson 3 - HTTP Resource Addressing</a><br>
-			Next: <a href="p-lesson5.html">Lesson 5 - HTTP Request Methods</a>
-        </section>
-        <hr>
-        <section id="prelims">
-          <div class="tm-content-box flex-2-col">
-            <div class="pad flex-item ">
-              <h2 class="tm-section-title">Preliminary lessons</h2>
-              <p class="tm-section-description">
-                Prelims covers HTTP concepts, from it's fundamentals to the different client- and server-side requests and responses..
-              </p>
-              <ul class = "bullet-less ">
-                <li><a href="pages/p-lesson1.html" >Lesson 1 - The Web VS. The Internet</a></li>
-                <li><a href="pages/p-lesson2.html" >Lesson 2 - The Hypertext Transfer Protocol</a></li>
-                <li><a href="pages/p-lesson3.html" >Lesson 3 - HTTP Resource Addressing</a></li>
-                <li>Lesson 4 - HTTP Response Messages</li>
-                <li><a href="pages/p-lesson5.html" >Lesson 5 - HTTP Request Methods</a></li>
-                <li><a href="pages/p-lesson6.html" >Lesson 6 - HTTP Message Headers</a></li>
-                <li><a href="pages/p-lesson7.html" >Lesson 7 - HTTP Status Codes</a></li>
+          <h3><a href="p-lesson5.html">Request Headers</a></h3>
+          <ul class = "content">
+            <li>The request headers/request methods are in the form of name:value pairs.</li>
+            <li>Multiple values, separated by commas, can be specified using
+              request-header-name: request-header-value1, request-header-value2, ...
+            </li>
+          </ul>
+          <hr>
+          <h2>HTTP Response Message</h2>
+          <img src = "../img/response-message.png" class = "block" alt = "response messages">
+          <h3>Status Line</h3>
+          <ul class = "content">
+            <li>The first line is called the status line, followed by optional response header(s).</li>
+            <ul class = "content">
+              <li>
+                The status line has the following syntax: 
+                <emp>HTTP-version status-code reason-phrase</emp>
+              </li>
+              <ul class = "content">
+                <li>
+                  <emp>HTTP-version</emp>
+                  : The HTTP version used in this session. Either HTTP/1.0 and HTTP/1.1.
+                </li>
+                <li>
+                  <emp><a href="p-lesson7.html">status-code</a></emp>
+                  : a 3-digit number generated by the server to reflect the outcome of the request.
+                </li>
+                <li>
+                  <emp>reason-phrase</emp>
+                  : gives a short explanation to the status code.
+                </li>
               </ul>
-            </div>
-          </div>
-        </section>
-        <section id="midterms">
-          <div class="tm-content-box flex-2-col">
-            <div class="pad flex-item ">
-              <h2 class="tm-section-title">Midterms lessons</h2>
-              <p class="tm-section-description">
-                Midterms covers the concepts of hypertext markup language, cascading styles sheets, and Javascript.
-              </p>
-              <ul class = "bullet-less ">
-              </ul>
-            </div>
-          </div>
-        </section>
-        <section id="finals">
-          <div class="tm-content-box flex-2-col">
-            <div class="pad flex-item ">
-              <h2 class="tm-section-title">Tentative final lessons</h2>
-              <p class="tm-section-description"></p>
-              <ul class = "bullet-less ">
-              </ul>
-            </div>
-          </div>
-        </section>
-        <footer class="tm-footer">
-          <p class="text-xs-center">This website is for the partial fulfillment of the requirements for IT324
-            - Design: <a rel="nofollow" href="http://www.templatemo.com/tm-481-elevate" target="_parent">Elevate</a>
-          </p>
-        </footer>
-      </div>
+            </ul>
+          </ul>
+          <h3><a href="p-lesson6.html">Response Headers</a></h3>
+          <ul class = "content">
+            <li>The response headers are in the form name:value pairs: response-header-name: response-header-value1, response-header-value2, ...</li>
+            <li>Multiple values, separated by commas, can be specified using
+              request-header-name: request-header-value1, request-header-value2, ...
+            </li>
+          </ul>
+          <h3>Response Message Body</h3>
+          <ul class = "content">
+            <li>The response message body contains the resource data requested.</li>
+          </ul>
+          <hr>
+          <details>
+            <summary class = "references">References</summary>
+            https://www.ntu.edu.sg/home/ehchua/programming/webprogramming/HTTP_Basics.html
+          </details>
+          Previous: <a href="p-lesson3.html">Lesson 3 - HTTP Resource Addressing</a><br>
+          Next: <a href="p-lesson5.html">Lesson 5 - HTTP Request Methods</a>
+    </section>
+    <hr>
+    <section id="prelims">
+    <div class="tm-content-box flex-2-col">
+    <div class="pad flex-item ">
+    <h2 class="tm-section-title">Preliminary lessons</h2>
+    <p class="tm-section-description">
+    Prelims covers HTTP concepts, from it's fundamentals to the different client- and server-side requests and responses..
+    </p>
+    <ul class = "bullet-less ">
+    <li><a href="pages/p-lesson1.html" >Lesson 1 - The Web VS. The Internet</a></li>
+    <li><a href="pages/p-lesson2.html" >Lesson 2 - The Hypertext Transfer Protocol</a></li>
+    <li><a href="pages/p-lesson3.html" >Lesson 3 - HTTP Resource Addressing</a></li>
+    <li>Lesson 4 - HTTP Response Messages</li>
+    <li><a href="pages/p-lesson5.html" >Lesson 5 - HTTP Request Methods</a></li>
+    <li><a href="pages/p-lesson6.html" >Lesson 6 - HTTP Message Headers</a></li>
+    <li><a href="pages/p-lesson7.html" >Lesson 7 - HTTP Status Codes</a></li>
+    </ul>
+    </div>
+    </div>
+    </section>
+    <section id="midterms">
+    <div class="tm-content-box flex-2-col">
+    <div class="pad flex-item ">
+    <h2 class="tm-section-title">Midterms lessons</h2>
+    <p class="tm-section-description">
+    Midterms covers the concepts of hypertext markup language, cascading styles sheets, and Javascript.
+    </p>
+    <ul class = "bullet-less ">
+    </ul>
+    </div>
+    </div>
+    </section>
+    <section id="finals">
+    <div class="tm-content-box flex-2-col">
+    <div class="pad flex-item ">
+    <h2 class="tm-section-title">Tentative final lessons</h2>
+    <p class="tm-section-description"></p>
+    <ul class = "bullet-less ">
+    </ul>
+    </div>
+    </div>
+    </section>
+    <footer class="tm-footer">
+    <p class="text-xs-center">This website is for the partial fulfillment of the requirements for IT324
+    - Design: <a rel="nofollow" href="http://www.templatemo.com/tm-481-elevate" target="_parent">Elevate</a>
+    </p>
+    </footer>
+    </div>
     </div>
     <!-- load JS files -->
     <script src="../js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
@@ -205,7 +231,7 @@
           $(".carousel-inner").swipe( {
               //Generic swipe handler for all directions
               swipeLeft:function(event, direction, distance, duration, fingerCount) {
-                  $(this).parent().carousel('next'); 
+                  $(this).parent().carousel('next');
               },
               swipeRight: function() {
                   $(this).parent().carousel('prev'); 
