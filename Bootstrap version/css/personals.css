@@ -43,7 +43,54 @@ img.inline-img {
 	float: left;
 }
 
-details {
+#sample-link{
+	text-align: center;
 	display: block;
+	margin: 10px;
+	padding: 10px;
+	font-size: 20px;
+	outline: black dotted thin;
+	background-color: #222222;
+	color: white;
 	width: 100%;
+}
+
+#scheme{
+	color: red;
+	background-color: #222222;
+}
+
+#auth {
+	color: orange;
+	background-color: #222222;
+}
+
+#host {
+	color: yellow;
+	background-color: #222222;
+}
+
+#port {
+	color: lime;
+	background-color: #222222;
+}
+
+#path {
+	color: green;
+	background-color: #222222;
+}
+
+#parameters {
+	color: aqua;
+	background-color: #222222;
+}
+
+#query {
+	color: blue;
+	background-color: #222222;
+}
+
+#fragment {
+	color: violet;
+	background-color: #222222;
 }
