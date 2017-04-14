@@ -1,5 +1,5 @@
-html, div, span, applet, object, iframe,
-h2, h3, h5, h6, p, blockquote, pre,
+html, span, applet, object, iframe,
+h2, h3, h5, h6, p,  blockquote, pre,
 a, abbr, abbr, address, big, cite, code,
 del, dfn, em, font, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -30,7 +30,7 @@ caption, tbody, tfoot, thead{
 html, body {
 	background-color:  #E5E4E2;
 	font-family: georgia;
-	margin-top:0;
+	margin:0;
 	padding:0;
 }
 
@@ -38,7 +38,7 @@ p{
 	background-color:  #E5E4E2;
 	color: gray;
 	padding-top:15px;
-	padding-bottom:15pxpx;
+	padding-bottom:15px;
 }
 
 p.center {
@@ -101,7 +101,6 @@ h1.lesson{
 h2{
 	color:  #3B3131;
 	margin-top: 30px;
-	margin-left: 10px;
 	font-size: 35px;
 }
 
@@ -143,7 +142,7 @@ hr {
 
 ul, ol {
 	margin-left: 80px;
-	
+
 }
 
 emp {
@@ -229,9 +228,8 @@ img.inline-img {
 div.page_wrap {
 	font-size: 20px;
 	margin-top: 0;
-	margin-bottom: 50px;
-	margin-left: 25%;
-	width: 75%;
+	width: 100%;
+	margin-left: 5%;
 	background-color: #BCC6CC;
 	padding-bottom: 50px;
 }
@@ -240,8 +238,8 @@ div.content {
 	width: auto;
 }
 
-a:visited { 
-    color: teal !important;
+a:visited {
+	color: teal !important;
 	text-decoration: underline;
 }
 
@@ -251,7 +249,7 @@ a:visited {
 }
 
 a:hover {
- 	text-decoration: underline;
+	text-decoration: underline;
 }
 
 ul.nextprev {
@@ -264,11 +262,11 @@ ul.nextprev {
 
 summary {
 	color: blue;
-	
+
 }
 p.CSS{
-		background-color: #BCC6CC;
-		color: black;
+	background-color: #BCC6CC;
+	color: black;
 }
 
 summary.references {
@@ -281,47 +279,47 @@ td {
 }
 
 #prelims-content {
-    display: none;
+	display: none;
 }
-    
+
 #prelims:hover > #prelims-content {
-    display: block;
+	display: block;
 }
 
 #midterms-content {
-    display: none;
+	display: none;
 }
-    
+
 #midterms:hover > #midterms-content {
-    display: block;
+	display: block;
 }
 
 #finals-content {
-    display: none;
+	display: none;
 }
-    
+
 #finals:hover > #finals-content {
-    display: block;
+	display: block;
 }
 
 .sidebar {
-	width: 23%;
+	display:none;
+	margin-left: 5%;
+	width: 20%;
+	height:100%;
 	background-color: #79B0AA;
-	position: absolute;
+	position: fixed;
 	top: 0em;
-	left: 1px;
-	padding: 0em 10px .8em;
-	color: antiquewhite;
-	outline: #4AC948 dotted thin;
+	border:solid;
 }
 
-.sidebar a { 
+.sidebar a {
 	color: antiquewhite;
-	text-decoration: none;	
+	text-decoration: none;
 }
 
 .sidebar h2 {
-	display: block;	
+	display: block;
 }
 
 .sidebar ul {
@@ -329,12 +327,14 @@ td {
 	font-size: 1.25em;
 	text-align: center;
 	line-height: 1.2em;
-	
+	list-style-type: none;
+
 }
 
 .sidebar ul li {
 	margin-bottom: .8em;
 	text-align: center;
+	list-style-type: none;
 }
 
 .nav h2 {
@@ -343,7 +343,8 @@ td {
 
 .nav ul li {
 	margin: 0 0 1.2em;
-	
+	list-style-type: none;
+
 }
 
 .nav ul li a {
@@ -366,4 +367,20 @@ td {
 	font-size: 0.75em;
 	margin-bottom: 0;
 	text-align: left;
+}
+.leftTol {
+	margin:0;
+	width:5%;
+	height: 100%;
+	position: fixed;
+	display: block;
+	background: #222;
+	text-align: center;
+}
+button{
+	width:70%;
+	height:5%;
+	border:none;
+	text-align: center;
+	font-size: 30px;
 }

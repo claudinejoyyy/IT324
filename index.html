@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>
+<head>
+	<title>
 		Web Systems and Technologies 2017
-		</title>
-		<link rel="stylesheet" media="screen" href="styles/main.css">
-	</head>
-	<body>
-		<div class = "page_wrap">
-			<h1 class = "title">WEBTEK</h1>
-			<p class = "center"> <span id="quote">
+	</title>
+	<link rel="stylesheet" media="screen" href="styles/main.css">
+	<script src="styles/Script/main.js"></script>
+</head>
+<body>
+<p class="leftTol">
+	<button id="btn" onclick="show()">-</button>
+</p>
+<div id="pageWrap" class = "page_wrap">
+	<h1 class = "title">WEBTEK</h1>
+	<p class = "center">
+                <span id="quote">
 				<img src = "resources/lee.jpg" alt = "" class = "block">
 				<br>
 				"The Web as I envisaged it, we have not seen it yet.
@@ -17,57 +22,58 @@
 				The future is still so much bigger than the past.
 				<br>
 				You affect the world by what you browse."
-			</p>
-			</span>
-			<h2 class = "center">Web Technologies</h2>
-			<p class = "left">
-				Web technology is the establishment and use of mechanisms that make it possible for different computers to communicate and share resources. Web technologies are infrastructural building blocks of any effective computer network: Local Area Network (LAN), Metroplitan Area Network (MAN) or a Wide Area Network (WAN), such as the Internet.
-			</p>
-			<h2 class = "center">Web Systems</h2>
-			<p class = "left">
-				Web systems refer to any application designed to be used on the Web.
-			</p>
-		</div>
-		<aside class="sidebar">
-		<div class="nav" id="nav">
-			<ul>
+                </span>
+	</p>
+
+	<h2 class = "center">Web Technologies</h2>
+	<p class = "left">
+		Web technology is the establishment and use of mechanisms that make it possible for different computers to communicate and share resources. Web technologies are infrastructural building blocks of any effective computer network: Local Area Network (LAN), Metroplitan Area Network (MAN) or a Wide Area Network (WAN), such as the Internet.
+	</p>
+	<h2 class = "center">Web Systems</h2>
+	<p class = "left">
+		Web systems refer to any application designed to be used on the Web.
+	</p>
+</div>
+<aside id="myModal" class="sidebar">
+	<div class="nav" id="nav">
+		<ul>
 			<li>
-                <div id = "Home">
-                <a href="index.html" class="main-link">Home</a>
-                </div>
+				<div id = "Home">
+					<a href="index.html" class="main-link">Home</a>
+				</div>
 				<div id = "prelims">
-				<a href="Pages/prelims.html" class="main-link">Prelims</a>
-				<a href="Pages/p-lesson1.html" id ="prelims-content" class="sub-link">Lesson 1 - The Web VS. The Internet</a>
-				<a href="Pages/p-lesson2.html" id ="prelims-content" class="sub-link">Lesson 2 - The Hypertext Transfer Protocol</a>
-				<a href="Pages/p-lesson3.html" id ="prelims-content" class="sub-link">Lesson 3 - HTTP Resource Addressing</a>
-				<a href="Pages/p-lesson4.html" id ="prelims-content" class="sub-link">Lesson 4 - HTTP Response Messages</a>
-				<a href="Pages/p-lesson5.html" id ="prelims-content" class="sub-link">Lesson 5 - HTTP Request Methods</a>
-				<a href="Pages/p-lesson6.html" id ="prelims-content" class="sub-link">Lesson 6 - HTTP Message Headers</a>
-				<a href="Pages/p-lesson7.html" id ="prelims-content" class="sub-link">Lesson 7 - HTTP Status Codes</a>
+					<a href="Pages/prelims.html" class="main-link">Prelims</a>
+					<a href="Pages/p-lesson1.html" id ="prelims-content" class="sub-link">Lesson 1 - The Web VS. The Internet</a>
+					<a href="Pages/p-lesson2.html" id ="prelims-content" class="sub-link">Lesson 2 - The Hypertext Transfer Protocol</a>
+					<a href="Pages/p-lesson3.html" id ="prelims-content" class="sub-link">Lesson 3 - HTTP Resource Addressing</a>
+					<a href="Pages/p-lesson4.html" id ="prelims-content" class="sub-link">Lesson 4 - HTTP Response Messages</a>
+					<a href="Pages/p-lesson5.html" id ="prelims-content" class="sub-link">Lesson 5 - HTTP Request Methods</a>
+					<a href="Pages/p-lesson6.html" id ="prelims-content" class="sub-link">Lesson 6 - HTTP Message Headers</a>
+					<a href="Pages/p-lesson7.html" id ="prelims-content" class="sub-link">Lesson 7 - HTTP Status Codes</a>
 				</div>
 				<div id = "midterms">
-				<a href="Pages/midterms.html" class="main-link">Midterms</a>
-				<a href="Pages/m-lesson1.html" id ="midterms-content" class="sub-link">Lesson 1 - Hypertext Markup Language</a>
-				<a href="Pages/m-lesson2.html" id ="midterms-content" class="sub-link">Lesson 2 - Cascading Style Sheet</a>
-				<a href="Pages/m-lesson3.html" id ="midterms-content" class="sub-link">Lesson 3 - Javascript</a>
-				<a href="Pages/m-lesson4.html" id ="midterms-content" class="sub-link">Lesson 4</a>
-				<a href="Pages/m-lesson5.html" id ="midterms-content" class="sub-link">Lesson 5</a>
-				<!-- add more as necessary -->
+					<a href="Pages/midterms.html" class="main-link">Midterms</a>
+					<a href="Pages/m-lesson1.html" id ="midterms-content" class="sub-link">Lesson 1 - Hypertext Markup Language</a>
+					<a href="Pages/m-lesson2.html" id ="midterms-content" class="sub-link">Lesson 2 - Cascading Style Sheet</a>
+					<a href="Pages/m-lesson3.html" id ="midterms-content" class="sub-link">Lesson 3 - Javascript</a>
+					<a href="Pages/m-lesson4.html" id ="midterms-content" class="sub-link">Lesson 4</a>
+					<a href="Pages/m-lesson5.html" id ="midterms-content" class="sub-link">Lesson 5</a>
+					<!-- add more as necessary -->
 				</div>
 				<div id = "finals">
-				<a href="Pages/finals.html" class="main-link">Finals</a>
-				<a href="Pages/f-lesson1.html" id ="finals-content" class="sub-link">Lesson 1</a>
-				<a href="Pages/f-lesson2.html" id ="finals-content" class="sub-link">Lesson 2</a>
-				<a href="Pages/f-lesson3.html" id ="finals-content" class="sub-link">Lesson 3</a>
-				<a href="Pages/f-lesson4.html" id ="finals-content" class="sub-link">Lesson 4</a>
-				<a href="Pages/f-lesson5.html" id ="finals-content" class="sub-link">Lesson 5</a>
-				<!-- add more as necessary -->
+					<a href="Pages/finals.html" class="main-link">Finals</a>
+					<a href="Pages/f-lesson1.html" id ="finals-content" class="sub-link">Lesson 1</a>
+					<a href="Pages/f-lesson2.html" id ="finals-content" class="sub-link">Lesson 2</a>
+					<a href="Pages/f-lesson3.html" id ="finals-content" class="sub-link">Lesson 3</a>
+					<a href="Pages/f-lesson4.html" id ="finals-content" class="sub-link">Lesson 4</a>
+					<a href="Pages/f-lesson5.html" id ="finals-content" class="sub-link">Lesson 5</a>
+					<!-- add more as necessary -->
 				</div>
 			</li>
-			</ul>
-		</div>
-	</aside>
-	</body>
+		</ul>
+	</div>
+</aside>
+</body>
 </html>
 
 <!----Web technologies definition from:---->
