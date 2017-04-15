@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<title>
 		Web Systems and Technologies 2017
 	</title>
@@ -8,10 +10,11 @@
 	<script src="styles/Script/main.js"></script>
 </head>
 <body>
-<p class="leftTol">
-	<button id="btn" onclick="show()">-</button>
-</p>
-<div id="pageWrap" class = "page_wrap">
+             <div id="main">
+  
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()"><i style="font-size:24px" class="fa">&#xf02d;</i> Lessons</span>
+</div>
+
 	<h1 class = "title">WEBTEK</h1>
 	<p class = "center">
                 <span id="quote">
@@ -33,15 +36,18 @@
 	<p class = "left">
 		Web systems refer to any application designed to be used on the Web.
 	</p>
-</div>
-<aside id="myModal" class="sidebar">
+
+
 	<div class="nav" id="nav">
+        
 		<ul>
 			<li>
+       
 				<div id = "Home">
 					<a href="index.html" class="main-link">Home</a>
 				</div>
 				<div id = "prelims">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 					<a href="Pages/prelims.html" class="main-link">Prelims</a>
 					<a href="Pages/p-lesson1.html" id ="prelims-content" class="sub-link">Lesson 1 - The Web VS. The Internet</a>
 					<a href="Pages/p-lesson2.html" id ="prelims-content" class="sub-link">Lesson 2 - The Hypertext Transfer Protocol</a>
@@ -72,7 +78,7 @@
 			</li>
 		</ul>
 	</div>
-</aside>
+
 </body>
 </html>
 

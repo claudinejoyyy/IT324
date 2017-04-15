@@ -1,22 +1,10 @@
-function show() {
-    var modal = document.getElementById('myModal');
-    modal.style.display = "block";
 
-    var pageW = document.getElementById('pageWrap');
-    pageW.style.marginLeft = "25%";
-    pageW.style.width = "75%";
+function openNav() {
+    document.getElementById("nav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
 
-
-    var button = document.getElementById("btn");
-
-    button.onclick = function() {
-            if (button.style.display == 'none') {
-                modal.style.display = "block";
-            }
-            else {
-                modal.style.display = "none";
-                pageW.style.marginLeft = "5%";
-                pageW.style.width = "100%";
-            }
-    }
+function closeNav() {
+    document.getElementById("nav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
 }
