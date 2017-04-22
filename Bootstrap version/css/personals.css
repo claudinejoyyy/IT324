@@ -1,3 +1,10 @@
+pre {
+	color: black; !important
+}
+
+del {
+	display: none;
+}
 hr {
 	margin-top: 50px;
 	margin-bottom: 50px;
