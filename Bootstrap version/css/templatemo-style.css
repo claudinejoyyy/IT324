@@ -69,10 +69,11 @@ body {
 .tm-nav-item-link:hover {
 	color: #666;
 	text-decoration: none;
-	border: 1px solid #999;
 }
 
-.tm-nav-item-link:focus { text-decoration: none; }
+.tm-nav-item-link:focus {
+	text-decoration: none;
+	border: 1px solid #999; }
 
 .tm-banner-title, 
 .tm-section-title, 
