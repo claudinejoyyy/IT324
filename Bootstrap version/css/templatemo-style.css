@@ -60,6 +60,7 @@ body {
 	width: 100%;
 	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
+    text-align: center;
 }
 
 .tm-nav-item-link.active,
