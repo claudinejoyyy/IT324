@@ -42,14 +42,17 @@ body {
 	background-color: white;
 	font-size: 1.6667em;
 	padding-top: 15px;
-	padding-bottom: 10px;
 	text-align: center;
 }
 
 .tm-nav-item {
+	float: left;
+	padding: 10px;
+	width: 33.33%;
 	list-style: none;
-	width: 100%;
-	padding: 15px 30px;
+	text-align: center;
+	background-color: white;
+	margin-bottom: 0;
 }
 
 .tm-nav-item-link{
@@ -298,17 +301,18 @@ body {
 	body {	padding-top: 100px;	}
 
 	.tm-sidebar {
-	    position: fixed;
-	    width: 100%;
-	    top: 0;
-	    left: 0;
-	    z-index: 1000;
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+		z-index: 1000;
+		background-color: white;
+		border-bottom: 2px solid rgba(153, 153, 153, 0.20);
 	}
 
 	.tm-sidebar-image { display: none; }
 
 	.tm-main-nav {
-		border-bottom: 1px solid rgba(153, 153, 153, 0.20);
 		font-size: 1.1em;
 		overflow: hidden;
 		padding-top: 0;
@@ -318,7 +322,12 @@ body {
 	.tm-nav-item {
 		float: left;
 		padding: 10px;
-		width: 25%;
+		width: 33.33%;
+		list-style: none;
+		text-align: center;
+		background-color: white;
+		margin-bottom: 0;
+
 	}
 
 	.tm-main-content {
