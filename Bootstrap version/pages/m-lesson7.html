@@ -138,56 +138,69 @@
 								<table class = "table">
 									<tr>
 										<td>document.childNodes</td>
-										<td>DESCRIPTION</td>
+										<td>The childNodes property returns a collection of a node's child nodes, as a NodeList object.
+                                            The nodes in the collection are sorted as they appear in the source code and can be accessed by index numbers. The index starts at 0.
+                                            Note: Whitespace inside elements is considered as text, and text is considered as nodes. Comments are also considered as nodes.</td>
 									</tr>
 									<tr>
-										<td>document.childrenn</td>
-										<td>DESCRIPTION</td>
+										<td>document.children</td>
+										<td>The children property returns a collection of an element's child elements, as an HTMLCollection           object.
+                                            The elements in the collection are sorted as they appear in the source code and can be accessed by index numbers. The index starts at 0. The difference between this property and childNodes, is that childNodes contain all nodes, including text nodes and comment nodes, while children only contain element nodes.</td>
 									</tr>
 									<tr>
 										<td>document.haschildNode</td>
-										<td>DESCRIPTION</td>
+										<td>The hasChildNodes() method returns true if the specified node has any child nodes, otherwise false.
+                                            Note: Whitespace inside a node is considered as text nodes, so if you leave any white space or line feeds inside an element, that element still has child nodes.
+                                        </td>
 									</tr>
 									<tr>
 										<td>document.body</td>
-										<td>DESCRIPTION</td>
+										<td>The body property sets or returns the document's body.
+                                            On return, this property returns the body element of the current document. On set, this property overwrites all child elements inside the existing body element, and replaces it with the new, specified content.</td>
 									</tr>
 									<tr>
 										<td>document.head.childNodes</td>
-										<td>DESCRIPTION</td>
+										<td>Returns the head element of the current document. If there are more than one head elements, the first     one is returned.</td>
 									</tr>
 									<tr>
 										<td>document.head.children</td>
-										<td>DESCRIPTION</td>
+										<td>The same as the document.body.children, but this time it is in the head element.</td>
 									</tr>
 									<tr>
 										<td>document.body.firstChild</td>
-										<td>DESCRIPTION</td>
+										<td>The firstChild property returns the first child node of the specified node, as a Node object.
+                                            The difference between this property and firstElementChild, is that firstChild returns the first child node as an element node, a text node or a comment node (depending on which one's first), while firstElementChild returns the first child node as an element node (ignores text and comment nodes).</td>
 									</tr>
 									<tr>
 										<td>document.body.firstElementChild</td>
-										<td>DESCRIPTION</td>
+										<td>The firstElementChild property returns the first child element of the specified element.</td>
 									</tr>
 									<tr>
 										<td>document.body.firstChild.nextSibling</td>
-										<td>DESCRIPTION</td>
+										<td>The nextSibling property returns the node immediately following the specified node, in the same tree     level.
+                                            The returned node is returned as a Node object.</td>
 									</tr>
 									<tr>
 										<td>document.body.firstChild.previousSibling</td>
-										<td>DESCRIPTION</td>
+										<td>The previousSibling property returns the previous node of the specified node, in the same tree level.
+                                            The returned node is returned as a Node object.</td>
 									</tr>
 								</table>
 							</ul>
-						</ul>
+						
                         <hr>
                         <details>
                             <summary class="references">References</summary>
-                            <ul></ul>
+                            <ul>
+                                <li>https://www.w3schools.com/jsref</li>
+                                <li>https://www.w3.org</li>
+                                <li>https://developer.mozilla.org/en-US/docs/Web/API/Document/head</li>
+                            </ul>
                         </details>
                         Next: <a href="m-lesson13.html" id="midterms-content" class="sub-link">Lesson 13 - CSS Rule Precedence</a>
                         <br> Previous: <a href="m-lesson11.html" id="midterms-content" class="sub-link">Lesson 11 - CSS Selectors</a>
                     </div>
-                </div>
+                </div></section>
                 <section id="prelims">
                     <div class="tm-content-box flex-2-col">
                         <div class="pad flex-item ">
