@@ -1,0 +1,189 @@
+Java (Servlets/JSP)	\
+PHP			 - can do anything, no limitation
+Node.js			/
+
+Java (Servlets/JSP)
+- Java SE (Standard Edition)
+- Java ME (Mini Edition)
+- Java EE (Enterprise Edition)
+	\> Java Web
+
+in NetBeans:
+- create project
+- select Java EE
+- select web services
+- select server application (web servers with built in JVM)
+- select context path
+- select frameworks (optional)
++ Web pages - for public resources
++ META-INF \
++ WEB-INF - for private resources
+Avoid using Glassfish because it is a very heavy server
+WAR - Web Archive
+EAR - Enterprise Archive
+
+Servlet - java file linked to a URL
+URL Pattern - will route a request to a servlet e.g. /Hello, /Hi, /Bye
+
+- handling request parameters (POST)
+action = "ParamServlet"
+in the ParamServlet file:
+String name = request.getParameter("nagan");
+String color = request.getParameter("kulay");
+
+action = "SaveProductServlet" method = "POST"
+	enctype = "multipart"
+in the doPost method:
+String id = request.getParameter("id");
+String desc = request.getParameter("description");
+BigDecimal price = new BigDecimal(request.getParameter("price"));
+Part img = request.getPart("image");
+try {
+	ps.executeUpdate();
+
+	ServletContext context = this.getServletContext();
+	String imagePath = context.getRealPath("/pictures/");
+}
+
+SERVLET - offers full general purpose programming
+	- class that extends HttpServlet
+	- mapped to a URL
+	- house to a servlet container
+doXXX method (e.g. doGet)
+HttpServletRequest - HTTP Request converted to an object
+
+<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<DRAWING>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>
+HttpServletResponse (initially empty)
+	- setStatus
+	- setHeader
+
+- Handling Request Parameters (GET)
+ 	protected void doGet (HttpServletRequest request)
+
+CRUD Application - create, replace, update, delete
+DRY - don't repeat yourself 
+
+- Request Dispatching
+	streamline process
+
+e.g. 	RequestDispatcher rd = request.getRequestDispatcher("")
+	rd.include(request, response)
+
+
+<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<DRAWING>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>
+- S2 gains access to the obj which was created by S1, asociated with the request
+
+<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<DRAWING>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>
+Markup - JSP		 - recommended
+Processing - Servlet 	/
+
+JSP 	- easier to write Markup
+	- allowsembedding of dynamic content
+	- servlet in disguise
+
+TOMCAT ____
+1. Catalina
+2. Jasper - converts JSP code to Java servlet code
+3. Clyde
+
+JSP comment - will not appear in the generated page
+<%--
+	This is a JSP comment
+--%>
+
+JSP Directives
+<%@page contentType = "text/html" pageEncoding = "UTF-8" import = "java.util.Date" %>
+@ can have multiple page directives
+<%@page import = "java.uti.Random" %>
+@ autoFlush, buffer, contentType, errorPage, extends, info, isELIgnored, isErrorPage, isThreadSafe, language, pageEncoding, session >> attributes
+
+JSP Template Text - static content,routed to the output as is
+JSP Standard Action - can be dynamic/static page
+<jsp:include page = "WEB-INF/fragments/includecontent.html"/S>
+<jsp:forward page = "    "/>
+<jsp:element name = "a>
+	<jsp:attribute name = "href>
+		http://www.slu.edu.ph
+	</jsp attribute>
+</jsp element>
+
+EL Expressions -> Expression Language
+<p> Hello, ${param.name}!</p>
+<p> Your browser is ${header['User-Agent]}.</p>
+$ {requestScope.productList}
+$ {requestScope.product.productID} -if
+
+JSP Scriplets
+(1) Scriptlet Scriplet - aribritrary Java code
+	<%
+		int i = 0;
+		for (; i < 5; i++){
+			out.println ("hello!");
+		}
+	%>
+(2) Scriplet Expression - just a single expression
+	<p> Today is <% = (new Date()).toString() %>.</p>
+
+(3) Scriplet Declaration - 
+	<%!
+		//instance variable
+		private int z;
+		//method
+		public void someMethod() {
+		//code
+		}
+	%>
+
+JSP Standard Tag Library
+- exposes programmatic constructs that can be used not in programming language form, but Markup form
+<%@taglib uri = " " prefix = " " %>
+		  \> core, xml, sql, function, formatting
+e.g. <%@taglib uri = " " prefix = "c/fn/fmt/sql/x" %>
+core, xml, sql, function, formatting has their own methods
+SESSION HANDLING -> series of requests that are correlated with one another
+HTTP - "stateless" (serve and forget)
+Cookie - simple textual data
+
+<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<DRAWING>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>
+- if a client logs in, a cookie is created; the next time the client logs in, the cookie will be used.
+- if the clients make a request initially, cookies will be created; these cookies will be used again if the user makes another request
+non-persistent cookies (in a cookie jar) will be cleared if the application is closed
+timeout mechanism is for avoiding piled up disconnected sessions
+- cookies can be manually manipulated
+	- persistent cookies will stay even if the application is closed
+	- can be set as HTTP only cookies or HTTP only cookies wherein JS will not be executed
+jsessionid - default name of cookie in java
+HttpSession session = request.getSession (true);
+session.setAttribute ("user", user);
+session.setAttribute ("cart", cart);
+
+for JSP
+${sessionScope.cart}
+
+for Java (Servlet)
+session.getAtribute("cart");
+
+session.invalidate(); -> removes cookies and destroys objects created
+
+applicationScope - objects created here can be accessed by all requests
+
+<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<DRAWING>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>
+Application Scope (AS)
+Session Scope (SS)
+Request (R)
+Session (S)
+
+listener
+public class NewServletListener implements ServletContextListener (?)
+web.xml - Standard deployment description
+	- contains configuration information

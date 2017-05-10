@@ -1,0 +1,8 @@
+Server-side web scripting
+- write a program
+- store in a server
+- map to a link
+any general multipurpose programming language can be used
+
+Sandbox	- protected environment		\ JS
+	- restricts some actions	/

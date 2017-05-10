@@ -1,0 +1,15 @@
+NODE.JS
+- allows implementation of a web application without apache
+MEAN stacks
+> Mongo DB
+> Express.JS -> backend
+> Angular -> frontend
+> Node.js
+
+var http = require('http');
+var server = http.createServer();
+server.listen(81);
+
+function handler (request, response){
+	response.end('hello, Node JS!!!);
+}
