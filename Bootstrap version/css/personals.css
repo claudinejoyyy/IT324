@@ -20,8 +20,8 @@ ul.bullet-less {
 	list-style: none;
 }
 
-ul, ol {
-	margin-left: 0px;
+ul.content {
+	margin-left: 40px;
 }
 
 h2{
