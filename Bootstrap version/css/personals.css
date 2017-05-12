@@ -1,5 +1,9 @@
 pre {
-	color: black; !important
+	color: green; !important
+}
+
+pre.inline {
+	display: inline; !important
 }
 
 del {

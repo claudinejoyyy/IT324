@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lesson 22 - Java Servlets/JSP</title>
+    <title>Lesson 23 - Servlet Processing and other Servlet Concepts</title>
     <!--
       Elevate
       http://www.templatemo.com/tm-481-elevate
@@ -44,56 +44,122 @@
         <div class="tm-main-content">
             <section id="home" class="tm-content-box tm-banner-small margin-b-10">
                 <div class="tm-banner-inner">
-                    <h1 class="tm-banner-title">Lesson 22</h1>
-                    <p class="tm-banner-text">Servlets</p>
+                    <h1 class="tm-banner-title">Lesson 23</h1>
+                    <p class="tm-banner-text">Servlet Processing and other Servlet Concepts</p>
                 </div>
             </section>
             <section>
                 <div class="tm-content-box">
                     <div class="pad ">
-                    	<h2>Java Servlets/JSP</h2>
+                    	<h2>Servlet Processing</h2>
                     	<ul class = "content">
-                    		<li>Java Object based on the Servlet API</li>
-                    		<li>Runs in a server application to answer client requests; technically,  servlets are not 
-                    		tied to a specific client-server protocol, but they are most commonly used with HTTP and 
-                    		the term "servlet" is often used in the context of an "HTTP Servlet"</li>
-                    		<li>Web-tier components in the Java Enterprise Edition architecture.</li>
-							<li>Runs in, and is managed by, a web-tier container called the "Servlet Container"</li>
-							<li>Mapped to URLs to which clients send requests</li>
-							<li>Typically asked with (among other things)</li>
+                    		<li>Client sends a request to a web server URL that is mapped to a servlet. Web server passes on the request to the servlet container</li>
+                    		<li>Servlet container checks if servlet is already loaded</li>
+                    		<li>If it is not yet loaded, servlet container loads the servlet class and instantiates the servlet, and calls its <pre style= "display:inline">init</pre> method</li>
+                    		<ul class = "content">
+                    			<li><pre style= "display:inline">init (config)</pre> - Invoked once on the servlet by the servlet container when the servlet is instantiated; can be used by the servlet for one-time startup initialization</li>
+                    		</ul>
+                    		<li>Servlet container invokes the servlet's <pre style= "display:inline">service</pre> method, passing request and response objects as arguments</li>
+                    		<ul class = "content">
+                    			<li><pre style= "display:inline">service(request, response)</pre> - Invoked each time the servlet is called upon to process a request (typically on a separate thread f or each call)</li>
+                    			<li>In  HttpServlet, the default Service implementation maps the call to a specific doXXX() method (e.g.  doGet,  doPost) which is typically overridden to affect the servlet‟s functionality</li>
+                    		</ul>
+                    		<li>Servlet processes the request using the response object to create the response, which is returned by the servlet container to  the 
+								web server, which in turn sends the response to the client</li>
+							<li>Subsequent request to the servlet will not require servlet re-instantiation, unless the servlet has been unloaded; before a servlet is 
+								unloaded, the servlet container invokes its <pre style= "display:inline">destroy</pre> method</li>
 							<ul class = "content">
-								<li>Processing and/or storing data submitted vial HTML forms</li>
-								<li>Generating dynamic content</li>
-							</ul>
-                    		<li>Editions</li>
-                    		<ul class = "content">
-                    			<li>Java SE (Standard Edition)</li>
-                    			<li>Java ME (Mini Edition)</li>
-                    			<li>Java Enterprise Edition (Enterprise Edition) - Java web</li>
+                    			<li><pre style= "display:inline">destroy()</pre> - Invoked  on  the  servlet  by  the  servlet  container  when  the  servlet  is  to  be  unloaded  (e.g.  when  the  application  is  stopped  or 
+								undeployed); can be used by the servlet for clean-up processing (e.g. resource deallocation</li>
                     		</ul>
-                    		<li>Packages</li>
+                    		<li>Servlet Request Processing (<pre class = "inline">HttpServletRequest</pre>)</li>
                     		<ul class = "content">
-                    			<li>javax.servlet</li>
-                    			<table class = "table">
-                    				<tr><td>Name</td><td>Description</td></tr>
-                    				<tr><th>Servlet</th>		<th>DESCRIPTION</th></tr>
-                    				<tr><td>GenericServlet</td>	<td>DESCRIPTION</td></tr>
-                    				<tr><td>ServletRequest</td>	<td>DESCRIPTION</td></tr>
-                    				<tr><td>ServletResponse</td><td>DESCRIPTION</td></tr>
-                    				<tr><td>ServletConfig</td>	<td>DESCRIPTION</td></tr>
-                    				<tr><td>ServletContext</td>	<td>DESCRIPTION</td></tr>
-                    				<tr><td>RequestDispatcher</td><td>DESCRIPTION</td></tr>
-                    			</table>
-                    			<li>javax.servlet.http</li>
-                    			<table class = "table">
-                    				<tr><th>Name</th>				<th>Description</th></tr>
-                    				<tr><td>HttpServlet</td>		<td>DESCRIPTION</td></tr>
-                    				<tr><td>HttpServletRequest</td>	<td>DESCRIPTION</td></tr>
-                    				<tr><td>HttpServletResponse</td><td>DESCRIPTION</td></tr>
-                    				<tr><td>HttpSession</td>		<td>DESCRIPTION</td></tr>
-                    				<tr><td>Cookie</td>				<td>DESCRIPTION</td></tr>
-                    			</table>
+                    			<li>Retrieving user-supplied request parameters</li>
+                    			<li>Retrieving request header values</li>
                     		</ul>
+                    		<li>Servlet Response Processing (<pre class = "inline">HttpServletResponse</pre>)</li>
+                    		<ul class = "content">
+                    			<li>Setting response status code</li>
+                    			<li>Setting response headers</li>
+                    			<li>Obtaining output object for sending the response</li>
+                    		</ul>
+                    		<li>Servlet Response Processing (<pre class = "inline">HttpServletResponse</pre>)</li>
+                    		<ul class = "content">
+                    			<li>Obtain a <pre class = "inline">RequestDispatcher</pre> to a resource (static or dynamic) from the request object</li>
+                    			<ul class = "content">
+	                    			<li><pre>
+RequestDispatcher rqstDsp;
+rqstDsp = request.getRequestDispatcher(res);</pre>
+	                    		</ul>
+	                    		<li>Include the dispatcher resource (or its output) in the current response; one or more resources can be included  (e.g. use for banners, 
+footers, etc.)</li>
+                    			<ul class = "content">
+	                    			<li><pre>
+rqstDsp.include(request, response)</pre>
+	                    		</ul>
+	                    		<li>Forwards  the  processing  of  the  current  request  to  the  dispatcher  resource;  the  servlet  processing  the  current  request  must  not 
+generate a response (e.g. use in MVC “controller” servlets)</li>
+                    			<ul class = "content">
+	                    			<li><pre>
+rqstDsp.forward(request, response);</pre>
+	                    		</ul>
+                    		</ul>
+                    		<li>Session Tracking (<pre class = "inline">HttpSession</pre>)</li>
+                    		<ul class = "content">
+                    			<li>Session tracking support is implemented either cookies or URL-rewriting</li>
+                    			<li>Obtaining session object from the current request</li><pre>
+HttpSession session;
+session = request.getSession(createNew)</pre>
+								<li>Obtaining session information (<pre class = inline>HttpSession</pre>)</li>
+								<table class = "table">
+									<tr><th>Command</th><th>Description</th></tr>
+									<tr><td>getCreationTime()</td>				<td>DESCRIPTION</td></tr>
+									<tr><td>getLastAccessedTime()</td>			<td>DESCRIPTION</td></tr>
+									<tr><td>getMaxInactiveInternal</td>			<td>DESCRIPTION</td></tr>
+									<tr><td>setMaxInactiveInterval(int val)</td><td>DESCRIPTION</td></tr>
+								</table>
+								<li>Destroying sessions</li>
+								<table class = "table">
+									<tr><th>Command</th><th>Description</th></tr>
+									<tr><td>invalidate()</td>				<td>DESCRIPTION</td></tr>
+								</table>
+								<li>URL rewriting (<pre class = inline>HttpServletResponse</pre>)</li>
+								<table class = "table">
+									<tr><th>Command</th><th>Description</th></tr>
+									<tr><td>encodeURL(String url)</td>			<td>DESCRIPTION</td></tr>
+									<tr><td>encodeRedirectURL(String url)</td>	<td>DESCRIPTION</td></tr>
+								</table>
+                    		</ul>
+                    		<li>Web Context (<pre class = "inline">ServletContext</pre>)</li>
+                    		<ul class = "content">
+                    			<li>A web application is associated with a context, which is an object that provides methods that servlets use to communicate wit h the servlet 
+container</li>
+								<li>Obtaining the servlet context (<pre class = "inline">HttpServlet</pre>)</li><pre>
+ServletContext context;
+context = this.getServletContext();</pre>
+								<li>Obtaining context information (<pre class = "inline">ServletContext</pre>)</li>
+								<table class = "table">
+									<tr><th>Command</th><th>Description</th></tr>
+									<tr><td>getServerInfo()</td>		<td>DESCRIPTION</td></tr>
+									<tr><td>getContextPath()</td>		<td>DESCRIPTION</td></tr>
+									<tr><td>getRealPath()</td>			<td>DESCRIPTION</td></tr>
+									<tr><td>getResource()</td>			<td>DESCRIPTION</td></tr>
+									<tr><td>getResourceAsStream()</td>	<td>DESCRIPTION</td></tr>
+									<tr><td>getMimeType</td>			<td>DESCRIPTION</td></tr>
+									<tr><td>getInitParameter()</td>		<td>DESCRIPTION</td></tr>
+									<tr><td>getInitParameterNames()</td><td>DESCRIPTION</td></tr>
+									<tr><td>getRequestDispatcher()</td>	<td>DESCRIPTION</td></tr>
+									<tr><td>getContext()</td>			<td>DESCRIPTION</td></tr>
+								</table>
+                    		</ul>
+                    		<li>Servlet Configuration (<pre class = "inline">ServletConfig</pre>)</li>
+                    		<table class = "table">
+								<tr><th>Command</th><th>Description</th></tr>
+								<tr><td>getServletName()</td>		<td>DESCRIPTION</td></tr>
+								<tr><td>getServletContext()</td>	<td>DESCRIPTION</td></tr>
+								<tr><td>getInitParameter()</td>		<td>DESCRIPTION</td></tr>
+								<tr><td>getInitParameterNames()</td><td>DESCRIPTION</td></tr>
+							</table>
                     	</ul>
                         <hr>
                         <details>
@@ -159,8 +225,8 @@
                          <ul class="bullet-less ">
 							<li><a href="f-lesson1.html" id="finals-content" class="sub-link">Lesson 20 - Server-side Scripting</a></li>
 							<li><a href="f-lesson2.html" id="finals-content" class="sub-link">Lesson 21 - Java Enterprise Edition</a></li>
-							<li>Lesson 22 - Servlets</li>
-							<li><a href="f-lesson4.html" id="finals-content" class="sub-link">Lesson 23 - Servlet Processing and other Servlet Concepts</a></li>
+							<li><a href="f-lesson3.html" id="finals-content" class="sub-link">Lesson 22 - Servlets</a></li>
+							<li>Lesson 23 - Servlet Processing and other Servlet Concepts</li>
 							<li><a href="f-lesson5.html" id="finals-content" class="sub-link">Lesson 24 - Scope Objects</a></li>
 							<li><a href="f-lesson6.html" id="finals-content" class="sub-link">Lesson 25 - Listeners and Filters</a></li>
 							<li><a href="f-lesson7.html" id="finals-content" class="sub-link">Lesson 26 - Java Server Pages</a></li>
