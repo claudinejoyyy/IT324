@@ -85,36 +85,212 @@ $y = 15.5;                      15.5
                             <ul class = "content">
                             <pre>
 &lt;?php
-echo "&lt;h2&gt;PHP is Fun!&lt;/h2&gt;";                                            RESULT: <h2>PHP is FUN!</h2>
-echo "Hello world!&lt;br&gt;";                                                        Hello world!
-echo "I'm about to learn PHP!&lt;br&gt;";                                             I'm about to learn PHP
-echo "This ", "string ", "was ", "made ", "with multiple parameters.";          This string was made with multiple parameters.
+echo "&lt;h2&gt;PHP is Fun!&lt;/h2&gt;";                                 RESULT:        <h2>PHP is FUN!</h2>
+echo "Hello world!&lt;br&gt;";                                                      Hello world!
+echo "I'm about to learn PHP!&lt;br&gt;";                                           I'm about to learn PHP
+echo "This ", "string ", "was ", "made ", "with multiple parameters.";              This string was made with multiple parameters.
 ?&gt;
 
                             </pre>
                                 <h5>The PHP print Statement</h5>
                                 <pre>
 &lt;?php
-print  "&lt;h2&gt;PHP is Fun!&lt;/h2&gt;";                                            RESULT: <h2>PHP is FUN!</h2>
-print  "Hello world!&lt;br&gt;";                                                        Hello world!
-print  "I'm about to learn PHP!&lt;br&gt;";                                             I'm about to learn PHP
+print  "&lt;h2&gt;PHP is Fun!&lt;/h2&gt;";                    RESULT: <h2>PHP is FUN!</h2>
+print  "Hello world!&lt;br&gt;";                                          Hello world!
+print  "I'm about to learn PHP!&lt;br&gt;";                               I'm about to learn PHP
 ?&gt;
                             </pre>                                
                             </ul>
                         </ul>
                             
                             
-							<li>PHP Data Types</li>
+							<h3>PHP Data Types</h3>
+                            <ul class = "content">
+                            <li>String - A string is a sequence of characters, like "Hello world!".</li>
+                            <ul class = "content">
+                            <pre>
+&lt;?php
+$x = "Hello world!";                        RESULT: Hello world!
+$y = 'Hello world!';                                Hello world!
+
+echo $x;
+echo "&lt;br&glt;>"; 
+echo $y;
+?&gt;
+
+                            </pre>
+                            </ul>
+                                <li>Integer</li>
+                                <p>An integer data type is a non-decimal number between -2,147,483,648 and 2,147,483,647.<br>
+                                    Rules for integers:<br>                             
+                                    1.An integer must have at least one digit<br>
+                                    2.An integer must not have a decimal point<br>
+                                    3.An integer can be either positive or negative<br>
+                                    4.Integers can be specified in three formats: decimal (10-based), hexadecimal (16-based - prefixed with 0x) or octal (8-based - prefixed with 0)<br>
+                                    In the following example $x is an integer. The PHP var_dump() function returns the data type and value:<p>
+                            <ul class = "content">
+                            <pre>
+&lt;?php
+$x = 6969;              RESULT: int(6969)
+var_dump($x);
+?&gt;
+
+                            </pre>
+                            </ul>
+                                <li>Float</li>
+                                <p>A float (floating point number) is a number with a decimal point or a number in exponential form.</p>
+                                                         <pre>
+&lt;?php
+$x = 69.69;              RESULT: float(69.69)
+var_dump($x);
+?&gt;
+
+                            </pre>
+                                <li>boolean</li>
+                                <p>A Boolean represents two possible states: TRUE or FALSE.</p>
+                                    <p>$x = true;</p>
+                                    <p>$x = false;</p>
+                                <li>Array</li>
+                                <p>An array stores multiple values in one single variable.</p>
+                                 <pre>
+&lt;?php
+$names = array("Escobar","Pablo","Gaviria");  RESULT:array(3) { [0]=> string(7) "Escobar" [1]=> string(5) "Pablo" [2]=> string(7) "Gaviria" }
+var_dump($names);   
+?&gt;
+
+                            </pre>
+                                <li>Object</li>
+                                <p>An object is a data type which stores data and information on how to process that data.</p>
+                                <p>In PHP, an object must be explicitly declared.</p>
+                                <p>First we must declare a class of object. For this, we use the class keyword. A class is a structure that can contain properties and methods:</p>
+                                <pre>
+&lt;?php
+class Car {
+    function Car() {
+        $this->model = "VW";    RESULT: VW
+    }
+}
+// create an object
+$herbie = new Car();
+
+// show object properties
+echo $herbie->model;
+?&gt;
+
+                            </pre>
+                                <li>Null</li>
+                                <p>Null is a special data type which can have only one value: NULL.</p>
+                                <p>A variable of data type NULL is a variable that has no value assigned to it.</p>
+                                <p>If a variable is created without a value, it is automatically assigned a value of NULL.</p>
+                                <p>Variables can also be emptied by setting the value to NULL:</p>
+                                                        <pre>
+&lt;?php
+$x = "Hello world!";            RESULT: NULL
+$x = null;
+var_dump($x);
+?&gt;
+
+                            </pre>
+                                <li>Resource</li>
+                                <p>The special resource type is not an actual data type. It is the storing of a reference to functions and resources external to PHP.<br>
+                                    A common example of using the resource data type is a database call.<br>
+                                    We will not talk about the resource type here, since it is an advanced topic.
+
+</p>
+                        </ul>
+                                                        <h3>Constants</h3>
+                        <ul class = "content">
+                            <li>A constant is an identifier (name) for a simple value. The value cannot be changed during the script.<br>
+                                A valid constant name starts with a letter or underscore (no $ sign before the constant name).<br>
+                                 Note: Unlike variables, constants are automatically global across the entire script.</li>
+                            <ul class = "content">
+                            <pre>
+&lt;?php
+// case-sensitive constant name
+define("GREETING", "Welcome to SLU");       RESULT: Welcome to SLU
+echo GREETING;
+?&gt;
+
+                            </pre>
+                            </ul>
+                            <li>Constants are Global</li>
+                            <p>Constants are automatically global and can be used across the entire script.<br>
+                                The example below uses a constant inside a function, even if it is defined outside the function:</p>
+                                                        <pre>
+&lt;?php
+define("GREETING", "Welcome to SLU");       RESULT: Welcome to SLU
+
+function myTest() {
+    echo GREETING;
+}
+ 
+myTest();
+?&gt;
+
+                            </pre>
+                        </ul>
+                            
+                                                     <h3>Functions</h3>
+                        <ul class = "content">
+                            <li>User Defined Functions</li>
+                            <p> Besides the built-in PHP functions, we can create our own functions.<br>
+                                A function is a block of statements that can be used repeatedly in a program.<br>
+                                A function will not execute immediately when a page loads.<br>
+                                A function will be executed by a call to the function.</p>
+                            <ul class = "content">
+                            <pre>
+&lt;?php
+function writeMsg() {
+    echo "Hello Pablo!";            RESULT: Hello Pablo!
+}
+
+writeMsg(); // call the function
+?&gt;
+
+                            </pre>
+                            </ul>
+                                         <li>Function Arguments</li>
+                                <p>Information can be passed to functions through arguments. An argument is just like a variable.<br>
+                                    Arguments are specified after the function name, inside the parentheses. You can add as many arguments as you want, just separate them with a comma.<br>
+                                    The following example has a function with one argument ($fname). When the familyName() function is called, we also pass along a name (e.g. Pablo), and the name is used inside the function, which outputs several different first names, but an equal last name:</p>
+                                                   <pre>
+&lt;?php
+function familyName($fname) {
+    echo "$fname Escobar.<br>";                                 RESULT: Pablo Escobar
+}                                           Mark Escobar
+                                            Frank Escobar
+familyName("Pablo");                        Jomar Escobar
+familyName("Mark");                         Spencer Escobar
+familyName("Frank");
+familyName("Jomar");
+familyName("Spencer");
+?&gt;
+
+                            </pre>
+                        </ul>
+                            <table class = "table">
+                                <h3>Sort Functions of Array</h3>
+                                <p>We will go through the following PHP array sort functions:</p>
+								<tr><th>SuperGlobals</th><th>Description</th></tr>
+								<tr><td><pre class = inline>sort()</pre></td><td>sort arrays in ascending order. Syntax:rsort($cars);</td></tr>
+								<tr><td><pre class = inline>rsort()  </pre></td><td>sort arrays in descending order. Syntax:rsort($numbers);</td></tr>
+								<tr><td><pre class = inline>asort() </pre></td><td>sort associative arrays in ascending order, according to the value. Syntax:asort($age);</td></tr>
+                                <tr><td><pre class = inline>ksort()</pre></td><td>sort associative arrays in ascending order, according to the key. Syntax:ksort($age);</td></tr>
+                                <tr><td><pre class = inline>arsort()</pre></td><td>sort associative arrays in descending order, according to the value. Syntax:arsort($age);</td></tr>
+                                <tr><td><pre class = inline>krsort()</pre></td><td>sort associative arrays in descending order, according to the key. Syntax:krsort($age);</td></tr>
+							</table>
+                            
+                            
+                            
 							<table class = "table">
-								<tr><th>Data Types</th><th>Description</th></tr>
-								<tr><td><pre class = inline>String</pre></td><td>A string is a sequence of characters, like "Hello world!".</td></tr>
-								<tr><td><pre class = inline>Integer </pre></td>					<td>An integer data type is a non-decimal number between -2,147,483,648 and 2,147,483,647. Rules for integers: 1.An integer must have at least one digit 2.An integer must not have a decimal point 3.An integer can be either positive or negative 4.Integers can be specified in three formats: decimal (10-based), hexadecimal (16-based - prefixed with 0x) or octal (8-based - prefixed with 0)</td></tr>
-								<tr><td><pre class = inline>Float (floating point numbers - also called double)</pre></td><td>A float (floating point number) is a number with a decimal point or a number in exponential form.</td></tr>
-								<tr><td><pre class = inline>Boolean</pre></td>				<td>A Boolean represents two possible states: TRUE or FALSE.</td></tr>
-                                <tr><td><pre class = inline>Array</pre></td><td>An array stores multiple values in one single variable.</td></tr>
-                                <tr><td><pre class = inline>Object</pre></td><td>An object is a data type which stores data and information on how to process that data. In PHP, an object must be explicitly declared.</td></tr>
-                                <tr><td><pre class = inline>NULL</pre></td><td>Null is a special data type which can have only one value: NULL. A variable of data type NULL is a variable that has no value assigned to it.</td></tr>
-                                <tr><td><pre class = inline>Resource</pre></td><td>The special resource type is not an actual data type. It is the storing of a reference to functions and resources external to PHP. A common example of using the resource data type is a database call. We will not talk about the resource type here, since it is an advanced topic.</td></tr>
+                                <h3>SuperGlobals</h3>
+                                <p>Several predefined variables in PHP are "superglobals", which means that they are always accessible, regardless of scope - and you can access them from any function, class or file without having to do anything special.</p>
+								<tr><th>SuperGlobals</th><th>Description</th></tr>
+								<tr><td><pre class = inline>$GLOBALS</pre></td><td>$GLOBALS is a PHP super global variable which is used to access global variables from anywhere in the PHP script (also from within functions or methods).</td></tr>
+								<tr><td><pre class = inline>$_SERVER </pre></td>					<td>$_SERVER is a PHP super global variable which holds information about headers, paths, and script locations.</td></tr>
+								<tr><td><pre class = inline>$_REQUEST </pre></td><td>PHP $_REQUEST is used to collect data after submitting an HTML form.</td></tr>
+								<tr><td><pre class = inline>$_POST</pre></td>				<td>PHP $_POST is widely used to collect form data after submitting an HTML form with method="post". $_POST is also widely used to pass variables.</td></tr>
+                                <tr><td><pre class = inline>$_GET</pre></td><td>PHP $_GET can also be used to collect form data after submitting an HTML form with method="get".</td></tr>
 							</table>
                     	</ul>
                    
