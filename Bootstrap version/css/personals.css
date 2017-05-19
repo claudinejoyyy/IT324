@@ -29,19 +29,19 @@ ul.content {
 }
 
 h2{
-	color: #3CB371;
+	color: #39D3A1;
 	margin-left: 10px;
 	font-size: 40px;
-	border-bottom: 1px solid #D3D3D3;
+/*	border-bottom: 1px solid #D3D3D3;*/
 	display: inline-block;
 }
 
 h3{
 	margin-top: 30px;
 	margin-left: 10px;
-	color: #2E8B57;
+	color: #33ECB0;
 	font-size: 30px;
-	border-bottom: 1px solid #D3D3D3;
+/*	border-bottom: 1px solid #D3D3D3;*/
 	display: inline-block;
 }
 
@@ -49,9 +49,9 @@ h4{
 	margin-top: 30px;
 	margin-bottom: 0px;
 	margin-left: 10px;
-	color: #228B22;
+	color: #4FFFC6;
 	font-size: 20px;
-	border-bottom: 1px solid #D3D3D3;
+/*	border-bottom: 1px solid #D3D3D3;*/
 	display: inline-block;	
 }
 
