@@ -53,23 +53,72 @@
                     <div class="pad ">
                     	<h2>Java object used to "subscribe" to application "events" in order to be "notified" when these events occur</h2>
                     	<ul class = "content">
-                    		<li>Context-related events</li>
+                    		<h5>Context-related events</h5>
                             <p>
-                                -context initialized, context destroyed, context attribute changes
+                                <li>This event involves resources or state held at the level of the application servlet context object</li>
+                                <li>context initialized, context destroyed, context attribute changes</li>
                             </p>
-							<li>Session-related events</li>
+							<h5>Session-related events</h5>
                             <p>
-                                -session created, session destroyed, session attribute changes
+                                <li>This event involves resources or state associated with the series of requests from a single user session; that is, associated with the HTTP session object.</li>
+                                <li>session created, session destroyed, session attribute changes</li>
                             </p>
-							<li>Request-related events</li>
+
                             <p>
-                                -request initialized, request destroyed, request attribute changes
+                            <pre>Each of these two levels has two event categories:</pre>
+                            <li>Lifecycle Changes</li>
+                            <li>Attribute Changes</li>
                             </p>
                     	</ul>
+                        <ul class = "content">
+                           <h3>Event Classes</h3> 
+                           <table class="table">
+                               <tr><th>Event Class</th><th>Description</th></tr>
+                               <tr><td><pre class="inlie">ServletRequestEvent</pre></td>             <td>
+                                   This is the event class for notifications about changes to the servlet request of a web application.</td></tr>
+                               <tr><td><pre class="inlie">ServletContextEvent</pre></td>             <td>
+                                   This is the event class for notifications about changes to the servlet context of a web application.</td></tr>
+                               <tr><td><pre class="inlie">ServletRequestAttributeEvent</pre></td>    <td>
+                                   This is the event class for notifications of changes to the attributes of the servlet request in an application.</td></tr> 
+                               <tr><td><pre class="inlie">ServletContextAttributeEvent</pre></td>    <td>
+                                   This is the event class for notifications about changes to the attributes of the servlet context of a web application.</td></tr> 
+                               <tr><td><pre class="inlie">HTTPSessionEvent</pre></td>                <td>
+                                  This is the class representing event notifications for changes to sessions within a web application.</td></tr>
+                               <tr><td><pre class="inlie">HTTPSessionBindingEvent</pre></td>         <td>
+                                   The session binds the object by a call to HttpSession.setAttribute and unbinds the object by a call to HttpSession.removeAttribute.</td></tr>           
+                           </table>
+                        </ul>
+
+                        <ul class = "content">
+                           <h3>Event Interfaces</h3> 
+                           <table class="table">
+                               <tr><th>Event Interface</th><th>Description</th></tr>
+                               <tr><td><pre class="inlie">ServletRequestListener</pre></td>             <td>
+                                   A ServletRequestListener can be implemented by the developer interested in being notified of requests coming in and out of scope in a web component.</td></tr>
+                               <tr><td><pre class="inlie">ServletRequestAttributeListener</pre></td>    <td>
+                                  A ServletRequestAttributeListener can be implemented by the developer interested in being notified of request attribute changes. Notifications will be generated while the request is within the scope of the web application in which the listener is registered. </td></tr>
+                               <tr><td><pre class="inlie">ServletContextListener</pre></td>             <td>
+                                   Implementations of this interface receive notifications about changes to the servlet context of the web application they are part of. To receive notification events, the implementation class must be configured in the deployment descriptor for the web application.</td></tr> 
+                               <tr><td><pre class="inlie">ServletContextAttributeListener</pre></td>    <td>
+                                  Implementations of this interface receive notifications of changes to the attribute list on the servlet context of a web application. To receive notification events, the implementation class must be configured in the deployment descriptor for the web application.</td></tr> 
+                               <tr><td><pre class="inlie">HttpSessionListener</pre></td>                <td>
+                                   Implementations of this interface are notified of changes to the list of active sessions in a web application. To receive notification events, the implementation class must be configured in the deployment descriptor for the web application.</td></tr>
+                               <tr><td><pre class="inlie">HttpSessionAttributeListener</pre></td>       <td>
+                                  This listener interface can be implemented in order to get notifications of changes to the attribute lists of sessions within this web application.</td></tr> 
+                               <tr><td><pre class="inlie">HttpSessionBindingListener</pre></td>         <td>
+                                  Causes an object to be notified when it is bound to or unbound from a session. The object is notified by an HttpSessionBindingEvent object. This may be as a result of a servlet programmer explicitly unbinding an attribute from a session, due to a session being invalidated, or due to a session timing out.</td></tr>
+                               <tr><td><pre class="inlie">HttpSessionActivationListener</pre></td>      <td>
+                                   Objects that are bound to a session may listen to container events notifying them that sessions will be passivated and that session will be activated. A container that migrates session between VMs or persists sessions is required to notify all attributes bound to sessions implementing HttpSessionActivationListener.</td></tr>       
+                           </table>
+                        </ul>
                         <hr>
                         <details>
                             <summary class="references">References</summary>
                             <ul>
+                            <a>https://www.javatpoint.com/Event-and-Listener-in-Servlet</a>
+                            <a>https://docs.oracle.com/cd/B14099_19/web.1012/b14017/filters.htm</a>
+                            <a>https://tomcat.apache.org</a>
+                            <a>http://docs.oracle.com</a>
                             </ul>
                         </details>
                         Previous: <a href="f-lesson5.html" id="finals-content" class="sub-link">Lesson 24 - Scope Objects</a><br>
@@ -123,9 +172,9 @@
             <section id="finals">
                 <div class="tm-content-box flex-2-col">
                     <div class="pad flex-item ">
-                        <h2 class="tm-section-title">Tentative final lessons</h2>
+                        <h2 class="tm-section-title">Final lessons</h2>
                         <p class="tm-section-description">
-                            Tentative finals cover the concepts of server-side scripting. This includes concepts on Java Enterprise Edition, servlets, PHP, JSP, and Node.js.
+                            Finals cover the concepts of server-side scripting. This includes concepts on Java Enterprise Edition, servlets, PHP, JSP, and Node.js.
                         </p>
                          <ul class="bullet-less ">
 							<li><a href="f-lesson1.html" id="finals-content" class="sub-link">Lesson 20 - Server-side Scripting</a></li>
