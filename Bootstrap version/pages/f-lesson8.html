@@ -52,10 +52,13 @@
             <section>
                 <div class="tm-content-box">
                     <div class="pad ">
-                    	<h2>Hypertext Preprocessor(PHP)</h2>
+                    	<h2>Hypertext Preprocessor (PHP)</h2>
                     	<ul class = "content">
-                    		<li>PHP stands for "Hypertext Preprocessor." (It is a recursive acronym, if you can understand what that means.) PHP is an HTML-embedded Web scripting language. This means PHP code can be inserted into the HTML of a Web page. When a PHP page is accessed, the PHP code is read or "parsed" by the server the page resides on. The output from the PHP functions on the page are typically returned as HTML code, which can be read by the browser. Because the PHP code is transformed into HTML before the page is loaded, users cannot view the PHP code on a page. This make PHP pages secure enough to access databases and other secure information.</li>
-                            <li>A lot of the syntax of PHP is borrowed from other languages such as C, Java and Perl. However, PHP has a number of unique features and specific functions as well. The goal of the language is to allow Web developers to write dynamically generated pages quickly and easily. PHP is also great for creating database-driven Web sites.</li>
+                    		<li>PHP is a recursive acronym that stands for "hypertext preprocessor."</li>
+							<li>PHP is an HTML-embedded Web scripting language. This means PHP code can be inserted into the HTML of a Web page.</li>
+							<li>When a PHP page is accessed, the PHP code is read or "parsed" by the server the page resides on. The output from the PHP functions on the page are typically returned as HTML code, which can be read by the browser.</li>
+							<li>Because the PHP code is transformed into HTML before the page is loaded, users cannot view the PHP code on a page. This make PHP pages secure enough to access databases and other secure information.</li>
+							<li>A lot of the syntax of PHP is borrowed from other languages such as C, Java and Perl. However, PHP has a number of unique features and specific functions as well. The goal of the language is to allow Web developers to write dynamically generated pages quickly and easily. PHP is also great for creating database-driven Web sites.</li>
 							<li>Why PHP?</li>
 							<ul class = "content">
 								<li>PHP runs on various platforms (Windows, Linux, Unix, Mac OS X, etc.) </li>
@@ -85,13 +88,18 @@ $y = 15.5;                      15.5
                             <h5>The PHP echo Statement</h5>
                             <ul class = "content">
                             <pre>
-&lt;?php
-echo "&lt;h2&gt;PHP is Fun!&lt;/h2&gt;";                                 RESULT:        <h2>PHP is FUN!</h2>
-echo "Hello world!&lt;br&gt;";                                                      Hello world!
-echo "I'm about to learn PHP!&lt;br&gt;";                                           I'm about to learn PHP
-echo "This ", "string ", "was ", "made ", "with multiple parameters.";              This string was made with multiple parameters.
+&lt;?p
+echo "&lt;h2&gt;PHP is Fun!&lt;/h2&gt;";
+echo "Hello world!&lt;br&gt;";
+echo "I'm about to learn PHP!&lt;br&gt;";
+echo "This ", "string ", "was ", "made ", "with multiple parameters.";
 ?&gt;
 
+RESULT:
+<h2>PHP is FUN!</h2>
+Hello world!
+I'm about to learn PHP
+This string was made with multiple parameters.
                             </pre>
                                 <h5>The PHP print Statement</h5>
                                 <pre>
@@ -111,13 +119,17 @@ print  "I'm about to learn PHP!&lt;br&gt;";                               I'm ab
                             <ul class = "content">
                             <pre>
 &lt;?php
-$x = "Hello world!";                        RESULT: Hello world!
-$y = 'Hello world!';                                Hello world!
+$x = "Hello world!";                        
+$y = 'Hello world!';                                
 
 echo $x;
 echo "&lt;br&glt;>"; 
 echo $y;
 ?&gt;
+
+RESULT:
+Hello world!
+Hello world!
 
                             </pre>
                             </ul>
@@ -132,8 +144,11 @@ echo $y;
                             <ul class = "content">
                             <pre>
 &lt;?php
-$x = 6969;              RESULT: int(6969)
+$x = 6969;
 var_dump($x);
+
+RESULT:
+int(6969)
 ?&gt;
 
                             </pre>
@@ -142,9 +157,12 @@ var_dump($x);
                                 <p>A float (floating point number) is a number with a decimal point or a number in exponential form.</p>
                                                          <pre>
 &lt;?php
-$x = 69.69;              RESULT: float(69.69)
+$x = 69.69;
 var_dump($x);
 ?&gt;
+
+RESULT:
+float(69.69)
 
                             </pre>
                                 <li>boolean</li>
@@ -186,10 +204,13 @@ echo $herbie->model;
                                 <p>Variables can also be emptied by setting the value to NULL:</p>
                                                         <pre>
 &lt;?php
-$x = "Hello world!";            RESULT: NULL
+$x = "Hello world!";
 $x = null;
 var_dump($x);
 ?&gt;
+
+RESULT:
+NULL
 
                             </pre>
                                 <li>Resource</li>
@@ -208,9 +229,12 @@ var_dump($x);
                             <pre>
 &lt;?php
 // case-sensitive constant name
-define("GREETING", "Welcome to SLU");       RESULT: Welcome to SLU
+define("GREETING", "Welcome to SLU");       
 echo GREETING;
 ?&gt;
+
+RESULT: 
+Welcome to SLU
 
                             </pre>
                             </ul>
@@ -219,7 +243,7 @@ echo GREETING;
                                 The example below uses a constant inside a function, even if it is defined outside the function:</p>
                                                         <pre>
 &lt;?php
-define("GREETING", "Welcome to SLU");       RESULT: Welcome to SLU
+define("GREETING", "Welcome to SLU");
 
 function myTest() {
     echo GREETING;
@@ -227,6 +251,9 @@ function myTest() {
  
 myTest();
 ?&gt;
+
+RESULT:
+Welcome to SLU
 
                             </pre>
                         </ul>
@@ -242,11 +269,14 @@ myTest();
                             <pre>
 &lt;?php
 function writeMsg() {
-    echo "Hello Pablo!";            RESULT: Hello Pablo!
+    echo "Hello Pablo!";
 }
 
 writeMsg(); // call the function
 ?&gt;
+
+RESULT:
+Hello Pablo!
 
                             </pre>
                             </ul>
@@ -257,16 +287,22 @@ writeMsg(); // call the function
                                                    <pre>
 &lt;?php
 function familyName($fname) {
-    echo "$fname Escobar.<br>";                                 RESULT: Pablo Escobar
-}                                           Mark Escobar
-                                            Frank Escobar
-familyName("Pablo");                        Jomar Escobar
-familyName("Mark");                         Spencer Escobar
+    echo "$fname Escobar.<br>";
+}                                           
+                                            
+familyName("Pablo");                        
+familyName("Mark");                         
 familyName("Frank");
 familyName("Jomar");
 familyName("Spencer");
 ?&gt;
 
+RESULT:
+Pablo Escobar
+Mark Escobar
+Frank Escobar
+Jomar Escobar
+Spencer Escobar
                             </pre>
                         </ul>
                             <table class = "table">
