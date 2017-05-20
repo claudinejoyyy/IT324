@@ -114,21 +114,21 @@ session = request.getSession(createNew)</pre>
 								<li>Obtaining session information (<pre class = inline>HttpSession</pre>)</li>
 								<table class = "table">
 									<tr><th>Command</th><th>Description</th></tr>
-									<tr><td>getCreationTime()</td>				<td>DESCRIPTION</td></tr>
-									<tr><td>getLastAccessedTime()</td>			<td>DESCRIPTION</td></tr>
-									<tr><td>getMaxInactiveInternal</td>			<td>DESCRIPTION</td></tr>
-									<tr><td>setMaxInactiveInterval(int val)</td><td>DESCRIPTION</td></tr>
+									<tr><td>getCreationTime()</td>				<td> Returns the time when this session was created, measured in milliseconds since midnight January 1, 1970 GMT.</td></tr>
+									<tr><td>getLastAccessedTime()</td>			<td> Returns the last time the client sent a request associated with this session, as the number of milliseconds since midnight January 1, 1970 GMT, and marked by the time the container received the request.</td></tr>
+									<tr><td>getMaxInactiveInterval</td>			<td> Returns the maximum time interval, in seconds, that the servlet container will keep this session open between client accesses.</td></tr>
+									<tr><td>setMaxInactiveInterval(int val)</td><td> Specifies the time, in seconds, between client requests before the servlet container will invalidate this session.</td></tr>
 								</table>
 								<li>Destroying sessions</li>
 								<table class = "table">
 									<tr><th>Command</th><th>Description</th></tr>
-									<tr><td>invalidate()</td>				<td>DESCRIPTION</td></tr>
+									<tr><td>invalidate()</td>				<td>Invalidates this session then unbinds any objects bound to it.</td></tr>
 								</table>
 								<li>URL rewriting (<pre class = inline>HttpServletResponse</pre>)</li>
 								<table class = "table">
 									<tr><th>Command</th><th>Description</th></tr>
-									<tr><td>encodeURL(String url)</td>			<td>DESCRIPTION</td></tr>
-									<tr><td>encodeRedirectURL(String url)</td>	<td>DESCRIPTION</td></tr>
+									<tr><td>encodeURL(String url)</td>			<td> Encodes the specified URL by including the session ID in it, or, if encoding is not needed, returns the URL unchanged.</td></tr>
+									<tr><td>encodeRedirectURL(String url)</td>	<td> Encodes the specified URL for use in the sendRedirect method or, if encoding is not needed, returns the URL unchanged.</td></tr>
 								</table>
                     		</ul>
                     		<li>Web Context (<pre class = "inline">ServletContext</pre>)</li>
@@ -141,32 +141,36 @@ context = this.getServletContext();</pre>
 								<li>Obtaining context information (<pre class = "inline">ServletContext</pre>)</li>
 								<table class = "table">
 									<tr><th>Command</th><th>Description</th></tr>
-									<tr><td>getServerInfo()</td>		<td>DESCRIPTION</td></tr>
-									<tr><td>getContextPath()</td>		<td>DESCRIPTION</td></tr>
-									<tr><td>getRealPath()</td>			<td>DESCRIPTION</td></tr>
-									<tr><td>getResource()</td>			<td>DESCRIPTION</td></tr>
-									<tr><td>getResourceAsStream()</td>	<td>DESCRIPTION</td></tr>
-									<tr><td>getMimeType</td>			<td>DESCRIPTION</td></tr>
-									<tr><td>getInitParameter()</td>		<td>DESCRIPTION</td></tr>
-									<tr><td>getInitParameterNames()</td><td>DESCRIPTION</td></tr>
-									<tr><td>getRequestDispatcher()</td>	<td>DESCRIPTION</td></tr>
-									<tr><td>getContext()</td>			<td>DESCRIPTION</td></tr>
+									<tr><td>getServerInfo()</td>		<td> Returns the name and version of the servlet container on which the servlet is running.</td></tr>
+									<tr><td>getContextPath()</td>		<td> Returns the context path of the web application.</td></tr>
+									<tr><td>getRealPath()</td>			<td> Gets the real path corresponding to the given virtual path.</td></tr>
+									<tr><td>getResource()</td>			<td> Returns a URL to the resource that is mapped to the given path.</td></tr>
+									<tr><td>getResourceAsStream()</td>	<td> Returns the resource located at the named path as an InputStream object.</td></tr>
+									<tr><td>getMimeType</td>			<td> Returns the MIME type of the specified file, or null if the MIME type is not known.</td></tr>
+									<tr><td>getInitParameter()</td>		<td> Returns a String containing the value of the named context-wide initialization parameter, or null if the parameter does not exist.</td></tr>
+									<tr><td>getInitParameterNames()</td><td> Returns the names of the context's initialization parameters as an Enumeration of String objects, or an empty Enumeration if the context has no initialization parameters.</td></tr>
+									<tr><td>getRequestDispatcher()</td>	<td> Returns a RequestDispatcher object that acts as a wrapper for the resource located at the given path.</td></tr>
+									<tr><td>getContext()</td>			<td> Returns a ServletContext object that corresponds to a specified URL on the server.</td></tr>
 								</table>
                     		</ul>
                     		<li>Servlet Configuration (<pre class = "inline">ServletConfig</pre>)</li>
                     		<table class = "table">
 								<tr><th>Command</th><th>Description</th></tr>
-								<tr><td>getServletName()</td>		<td>DESCRIPTION</td></tr>
-								<tr><td>getServletContext()</td>	<td>DESCRIPTION</td></tr>
-								<tr><td>getInitParameter()</td>		<td>DESCRIPTION</td></tr>
-								<tr><td>getInitParameterNames()</td><td>DESCRIPTION</td></tr>
+								<tr><td>getServletName()</td>		<td> Returns the name of this servlet instance.</td></tr>
+								<tr><td>getServletContext()</td>	<td> Returns a reference to the ServletContext in which the caller is executing.</td></tr>
+								<tr><td>getInitParameter()</td>		<td> Gets the value of the initialization parameter with the given name.</td></tr>
+								<tr><td>getInitParameterNames()</td><td> Returns the names of the servlet's initialization parameters as an Enumeration of String objects, or an empty Enumeration if the servlet has no initialization parameters.</td></tr>
 							</table>
                     	</ul>
                         <hr>
                         <details>
                             <summary class="references">References</summary>
                             <ul>
-                            </ul>
+							<a href = "https://tomcat.apache.org/tomcat-5.5-doc/servletapi/javax/servlet/http/HttpSession.html" target = "_blank">https://tomcat.apache.org/tomcat-5.5-doc/servletapi/javax/servlet/http/HttpSession.html</a>
+							<a href = "http://docs.oracle.com/javaee/6/api/javax/servlet/ServletContext.html" target = "_blank">http://docs.oracle.com/javaee/6/api/javax/servlet/ServletContext.html</a>
+							<a href = "http://docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletResponse.html" target = "_blank">http://docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletResponse.html</a>
+							<a href = "http://docs.oracle.com/javaee/6/api/javax/servlet/ServletConfig.html" target = "_blank">http://docs.oracle.com/javaee/6/api/javax/servlet/ServletConfig.html</a>
+							</ul>
                         </details>
                         Previous: <a href="f-lesson3.html" id="finals-content" class="sub-link">Lesson 22 - Servlets</a><br>
       					Next: <a href="f-lesson5.html" id="finals-content" class="sub-link">Lesson 24 - Scope Objects</a>
