@@ -61,14 +61,14 @@
                     			<ul class = "content">
                     				<li>Java Enterprise Edition Clients</li>
                     				<ul class = "content">
-                    					<li>Application Clients - DESCRIPTION OF APPLICATION CLIENTS</li>
-                    					<li>Applets - DESCRIPTION OF APPLETS</li>
+                    					<li>Application Clients - Is used to perform tasks, such as system or application administration. It is typicalbundled with strong enterprise components, like Web services and EJB, which are deployed in a remote application server.</li>
+                    					<li>Applets - Is a small program that can be sent along with a Web page to a user. Java applets can perform interactive animations, immediate calculations, or other simple tasks without having to send a user request back to the server.</li>
                     				</ul>
                     				<li>Web Components</li>
                     				<ul class = "content">
-                    					<li>Servlets - DESCRIPTION</li>
-                    					<li>Java server pages - DESCRIPTION</li>
-                    					<li>Java server faces - DESCRIPTION</li>
+                    					<li>Servlets - Is a Java programming language class that is used to extend the capabilities of servers that host applications accessed by means of a request-response programming model. Although servlets can respond to any type of request, they are commonly used to extend the applications hosted by web servers. For such applications, Java Servlet technology defines HTTP-specific servlet classes.</li>
+                    					<li>Java server pages - Is a technology allows you to easily create web content that has both static and dynamic components. JSP technology makes available all the dynamic capabilities of Java Servlet technology but provides a more natural approach to creating static content.</li>
+                    					<li>Java server faces - Is a Java-based web application framework intended to simplify development integration of web-based user interfaces. JavaServer Faces is a standardized display technology, which was formalized in a specification through the Java Community Process.</li>
                     				</ul>
                     				<li>Enterprise JavaBeans (EJBM)</li>
                     			</ul>
@@ -76,13 +76,13 @@
                     		<ul class = "content">
                     			<li>Java Enterprise Edition Containers</li>
                     			<ul class = "content">
-                    				<li>Client containers - DESCRIPTION</li>
-                    				<li>Web container - DESCRIPTION</li>
-                    				<li>EJB container - DESCRIPTION</li>
+                    				<li>Client containers - Provides system services that enable a Java client program to execute. It communicates with the Application Server using RMI/IIOP and manages communication of RMI/IIOP using the client ORB bundled with it. </li>
+                    				<li>Web container -  Is the component of a web server that interacts with Java servlets. A web container is responsible for managing the lifecycle of servlets, mapping a URL to a particular servlet and ensuring that the URL requester has the correct access-rights.</li>
+                    				<li>EJB container - Provides an environment that supports the execution of applications developed using Enterprise JavaBeans™ (EJB) components. It manages and coordinates the allocation of resources to the applications.</li>
                     			</ul>
                     			<li>Java Enterprise Edition Server</li>
                     			<ul class = "content">
-                    				<li>DESCRIPTION OF JAVA Enterprise Edition SERVER</li>
+                    				<li>A Java EE server is a server application that the implements the Java EE platform APIs and provides the standard Java EE services. Java EE servers are sometimes called application servers, because they allow you to serve application data to clients, much like web servers serve web pages to web browsers. Java EE servers host several application component types that correspond to the tiers in a multi-tiered application. The Java EE server provides services to these components in the form of a container.</li>
                     			</ul>
                     		</ul>
                     		<li>Java Enterprise Edition Web Application</li>
@@ -100,26 +100,32 @@
 								<li>XML-formatted descriptor and configuration files</li>
 								<table class = "table">
 									<tr><th>Descriptor</th><th>Description</th></tr>
-									<tr><td>web.xml</td><td>DESCRIPTION</td></tr>
-									<tr><td>application.xml</td><td>DESCRIPTION</td></tr>
-									<tr><td>context.xml</td><td>DESCRIPTION</td></tr>
-									<tr><td>ADD MORE</td><td>&lt3 &lt3 &lt3 &lt3 &lt3</td></tr>
+                                     <tr><td>appengine-web.xml</td><td>To specify the app's registered application ID and the version identifier of the latest code, and to identify which files in the app's WAR are static files (like images) and which are resource files used by the application. </td></tr>
+                                    <tr><td>application.xml</td><td> Is the deployment descriptor for Enterprise Application Archives.  Application is the root element of the application deployment descriptor. The elements within the application element are described in the following sections.</td></tr>
+									<tr><td>context.xml</td><td>  Is an optional file which contains a &lt;Context&gt; tag (Context Fragment) for a single Tomcat web application. This can be used to define certain behaviours for your application, JNDI resources and other settings. The context.xml file was introduced in Tomcat 5, to remove Context settings from the server.xml file.</td></tr>
+                                    <tr><td>cron.xml</td><td>Defines scheduled tasks for your application. Also a cron.xml file in the WEB-INF directory of your application (alongside appengine-web.xml ) controls cron for your Java application. </td></tr>
+                                    <tr><td>datastore-indexes.xml</td><td>The development server can generate the index configuration needed by your application when it performs these queries while you are testing your app. You can tune indexes manually by editing the datastore-indexes.xml file before uploading the application.</td></tr>
+                                    <tr><td>dispatch.xml</td><td>Allows you to override the routing rules. You can use the dispatch.xml to send incoming requests to a specific service (formerly known as modules) based on the path or hostname in the URL. For example, if you wanted to route requests to the http://simple-sample.appspot.com/mobile/ URL to a mobile front end, and serve all your static content from the default service. The dispatch.xml file should reside in the WEB-INF directory of the default service.</td></tr>
+									<tr><td>web.xml</td><td>Defines mappings between URL paths and the servlets that handle requests with those paths. The web server uses this configuration to identify the servlet to handle a given request and call the class method that corresponds to the request method (e.g. the doGet() method for HTTP GET requests).</td></tr>
+                                    <tr><td>queue.xml</td><td>Applications define task queues in a configuration file called queue.xml. For Java apps, this file is stored in the application's WEB-INF directory. You can use queue.xml to configure both push queues and pull queues. This configuration file is optional for push queues, which have a default queue. Pull queues must be specifically configured in queue.xml.</td></tr>
+									
+                                    
 								</table>
 								<li>Organized into a standard hierarchical structure and typically packaged and deployed as WAR or EAR files</li>
                     		</ul>
                     		<li>Java Enterprise Edition APIs</li>
                     		<table class = "table">
                    				<tr><th>API</th><th>Description</th></tr>
-								<tr><td>Enterprise JavaBeans Technology</td><td>Description</td></tr>
-								<tr><td>Java Servlet Technology</td><td>Description</td></tr>
-								<tr><td>Java Server Pages</td><td>Description</td></tr>
-								<tr><td>Java Server Pages Standard Tag Library</td><td>Description</td></tr>
-								<tr><td>Java Server Faces</td><td>Description</td></tr>
-								<tr><td>Java Msg Service API</td><td>Description</td></tr>
-								<tr><td>Java Transaction API</td><td>Description</td></tr>
-								<tr><td>JavaMail API</td><td>Description</td></tr>
-								<tr><td>JavaBeans Activation Framework</td><td>Description</td></tr>
-								<tr><td>Java API for XML Processing</td><td>Description</td></tr>
+								<tr><td>Enterprise JavaBeans Technology</td><td>One of several Java APIs for modular construction of enterprise software. EJB is a server-side software component that encapsulates business logic of an application. An EJB web container provides a runtime environment for web related software components, including computer security, Java servlet lifecycle management, transaction processing, and other web services.</td></tr>
+								<tr><td>Java Servlet Technology</td><td>A Java program that extends the capabilities of a server. Although servlets can respond to any types of requests, they most commonly implement applications hosted on Web servers. Such Web servlets are the Java counterpart to other dynamic Web content technologies such as PHP and ASP.NET.</td></tr>
+								<tr><td>Java Server Pages</td><td>A technology that helps software developers create dynamically generated web pages based on HTML, XML, or other document types. Released in 1999 by Sun Microsystems, JSP is similar to PHP, ASP and React's JSX, but it uses the Java programming language.</td></tr>
+								<tr><td>Java Server Pages Standard Tag Library</td><td>Encapsulates as simple tags the core functionality common to many Web applications. JSTL has support for common, structural tasks such as iteration and conditionals, tags for manipulating XML documents, internationalization tags, and SQL tags. It also provides a framework for integrating existing custom tags with JSTL tags. </td></tr>
+								<tr><td>Java Server Faces</td><td>A Java-based web application framework intended to simplify development integration of web-based user interfaces. JavaServer Faces is a standardized display technology, which was formalized in a specification through the Java Community Process.</td></tr>
+								<tr><td>Java Msg Service API</td><td> A Java API that allows applications to create, send, receive, and read messages. Designed by Sun and several partner companies, the JMS API defines a common set of interfaces and associated semantics that allow programs written in the Java programming language to communicate with other messaging implementations.</td></tr>
+								<tr><td>Java Transaction API</td><td>Specifies standard Java interfaces between a transaction manager and the parties involved in a distributed transaction system: the resource manager, the application server, and the transactional applications. </td></tr>
+								<tr><td>JavaMail API</td><td>Provides a platform-independent and protocol-independent framework to build mail and messaging applications. The JavaMail API is available as an optional package for use with the Java SE platform and is also included in the Java EE platform.</td></tr>
+								<tr><td>JavaBeans Activation Framework</td><td>With the JavaBeans Activation Framework standard extension, developers who use Java technology can take advantage of standard services to determine the type of an arbitrary piece of data, encapsulate access to it, discover the operations available on it, and to instantiate the appropriate bean to perform said operation(s). For example, if a browser obtained a JPEG image, this framework would enable the browser to identify that stream of data as an JPEG image, and from that type, the browser could locate and instantiate an object that could manipulate, or view that image.</td></tr>
+								<tr><td>Java API for XML Processing</td><td>Enables applications to parse, transform, validate and query XML documents using an API that is independent of a particular XML processor implementation. JAXP provides a pluggability layer to enable vendors to provide their own implementations without introducing dependencies in application code. Using this software, application and tool developers can build fully-functional XML-enabled Java applications for e-commerce, application integration, and web publishing.</td></tr>
 							</table>
                     	</ul>
                     	
@@ -127,6 +133,7 @@
                         <details>
                             <summary class="references">References</summary>
                             <ul>
+                                <li>http://www.oracle.com</li>
                             </ul>
                         </details>
                         Previous: <a href="f-lesson1.html" id="finals-content" class="sub-link">Lesson 20 - Server-side Scripting</a><br>
