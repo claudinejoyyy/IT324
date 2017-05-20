@@ -72,17 +72,16 @@
 							<li>Creating, accessing, and removing attribute objects</li>
 							<table class = "table">
 								<tr><th>Command</th><th>Description</th></tr>
-								<tr><td><pre class = inline>setAttribute (String attrName, Object attrValue)</pre></td>	<td>DESCRIPTION</td></tr>
-								<tr><td><pre class = inline>getAttribute (String attrName)</pre></td>					<td>DESCRIPTION</td></tr>
-								<tr><td><pre class = inline>getAttributeNames()</pre></td>								<td>DESCRIPTION</td></tr>
-								<tr><td><pre class = inline>removeAttribute (String attrName)</pre></td>				<td>DESCRIPTION</td></tr>	
+								<tr><td><pre class = inline>public void setAttribute(String name,Object object)</pre></td>  <td>sets the given object in the application scope</td></tr>
+								<tr><td><pre class = inline>public Object getAttribute(String name)</pre></td>	<td>returns the attribute for the specified name</td></tr>
+								<tr><td><pre class = inline>public Enumeration getInitParameterNames()</pre></td>	<td>returns the names of the context's initialization parameters as an Enumeration of String objects</td></tr>
+								<tr><td><pre class = inline>public void removeAttribute(String name)</pre></td> <td>removes the attribute with the given name from the servlet context</td></tr>	
 							</table>
                     	</ul>
                         <hr>
                         <details>
                             <summary class="references">References</summary>
-                            <ul>
-                            </ul>
+                            <a href = "https://www.javatpoint.com/attribute" target = "_blank">https://www.javatpoint.com/attribute</a>
                         </details>
                         Previous: <a href="f-lesson4.html" id="finals-content" class="sub-link">Lesson 23 - Servlet Processing and other Servlet Concepts</a><br>
       					Next: <a href="f-lesson6.html" id="finals-content" class="sub-link">Lesson 25 - Listeners and Filters</a>
