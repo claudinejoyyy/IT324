@@ -73,44 +73,291 @@
                     	</ul>
                         <ul class = "content">
                            <h3>Event Classes</h3> 
+                           <details>
+                           <summary>More Information</summary>
                            <table class="table">
                                <tr><th>Event Class</th><th>Description</th></tr>
-                               <tr><td><pre class="inlie">ServletRequestEvent</pre></td>             <td>
+                               <tr><td><pre class="inline">ServletRequestEvent</pre></td>             <td>
                                    This is the event class for notifications about changes to the servlet request of a web application.</td></tr>
-                               <tr><td><pre class="inlie">ServletContextEvent</pre></td>             <td>
+                               <tr><td><pre class="inline">ServletContextEvent</pre></td>             <td>
                                    This is the event class for notifications about changes to the servlet context of a web application.</td></tr>
-                               <tr><td><pre class="inlie">ServletRequestAttributeEvent</pre></td>    <td>
+                               <tr><td><pre class="inline">ServletRequestAttributeEvent</pre></td>    <td>
                                    This is the event class for notifications of changes to the attributes of the servlet request in an application.</td></tr> 
-                               <tr><td><pre class="inlie">ServletContextAttributeEvent</pre></td>    <td>
+                               <tr><td><pre class="inline">ServletContextAttributeEvent</pre></td>    <td>
                                    This is the event class for notifications about changes to the attributes of the servlet context of a web application.</td></tr> 
-                               <tr><td><pre class="inlie">HTTPSessionEvent</pre></td>                <td>
+                               <tr><td><pre class="inline">HTTPSessionEvent</pre></td>                <td>
                                   This is the class representing event notifications for changes to sessions within a web application.</td></tr>
-                               <tr><td><pre class="inlie">HTTPSessionBindingEvent</pre></td>         <td>
-                                   The session binds the object by a call to HttpSession.setAttribute and unbinds the object by a call to HttpSession.removeAttribute.</td></tr>           
+                               <tr><td><pre class="inline">HTTPSessionBindingEvent</pre></td>         <td>
+                                   The session binds the object by a call to HttpSession.setAttribute and unbinds the object by a call to HttpSession.removeAttribute.</td></tr>  
+                                     
                            </table>
+                           </details>
                         </ul>
 
                         <ul class = "content">
                            <h3>Event Interfaces</h3> 
+                           <details>
+                           <summary>More Information</summary>
                            <table class="table">
                                <tr><th>Event Interface</th><th>Description</th></tr>
-                               <tr><td><pre class="inlie">ServletRequestListener</pre></td>             <td>
+                               <tr><td><pre class="inline">ServletRequestListener</pre></td>             <td>
                                    A ServletRequestListener can be implemented by the developer interested in being notified of requests coming in and out of scope in a web component.</td></tr>
-                               <tr><td><pre class="inlie">ServletRequestAttributeListener</pre></td>    <td>
+                               <tr><td><pre class="inline">ServletRequestAttributeListener</pre></td>    <td>
                                   A ServletRequestAttributeListener can be implemented by the developer interested in being notified of request attribute changes. Notifications will be generated while the request is within the scope of the web application in which the listener is registered. </td></tr>
-                               <tr><td><pre class="inlie">ServletContextListener</pre></td>             <td>
+                               <tr><td><pre class="inline">ServletContextListener</pre></td>             <td>
                                    Implementations of this interface receive notifications about changes to the servlet context of the web application they are part of. To receive notification events, the implementation class must be configured in the deployment descriptor for the web application.</td></tr> 
-                               <tr><td><pre class="inlie">ServletContextAttributeListener</pre></td>    <td>
+                               <tr><td><pre class="inline">ServletContextAttributeListener</pre></td>    <td>
                                   Implementations of this interface receive notifications of changes to the attribute list on the servlet context of a web application. To receive notification events, the implementation class must be configured in the deployment descriptor for the web application.</td></tr> 
-                               <tr><td><pre class="inlie">HttpSessionListener</pre></td>                <td>
+                               <tr><td><pre class="inline">HttpSessionListener</pre></td>                <td>
                                    Implementations of this interface are notified of changes to the list of active sessions in a web application. To receive notification events, the implementation class must be configured in the deployment descriptor for the web application.</td></tr>
-                               <tr><td><pre class="inlie">HttpSessionAttributeListener</pre></td>       <td>
+                               <tr><td><pre class="inline">HttpSessionAttributeListener</pre></td>       <td>
                                   This listener interface can be implemented in order to get notifications of changes to the attribute lists of sessions within this web application.</td></tr> 
-                               <tr><td><pre class="inlie">HttpSessionBindingListener</pre></td>         <td>
+                               <tr><td><pre class="inline">HttpSessionBindingListener</pre></td>         <td>
                                   Causes an object to be notified when it is bound to or unbound from a session. The object is notified by an HttpSessionBindingEvent object. This may be as a result of a servlet programmer explicitly unbinding an attribute from a session, due to a session being invalidated, or due to a session timing out.</td></tr>
-                               <tr><td><pre class="inlie">HttpSessionActivationListener</pre></td>      <td>
-                                   Objects that are bound to a session may listen to container events notifying them that sessions will be passivated and that session will be activated. A container that migrates session between VMs or persists sessions is required to notify all attributes bound to sessions implementing HttpSessionActivationListener.</td></tr>       
+                               <tr><td><pre class="inline">HttpSessionActivationListener</pre></td>      <td>
+                                   Objects that are bound to a session may listen to container events notifying them that sessions will be passivated and that session will be activated. A container that migrates session between VMs or persists sessions is required to notify all attributes bound to sessions implementing HttpSessionActivationListener.</td></tr>  
+                                       
                            </table>
+                           </details> 
+                        </ul>
+
+                        <ul class="content">
+                        <table class="table">
+                        <th>ServletRequestEvent</th>
+                            <tr>
+                                <td>
+                                  <details>
+                                    <summary>Constructor Detail</summary>
+                                        <p>
+                                        <em>public ServletRequestEvent(ServletContext sc,
+                                       ServletRequest request)</em>
+                                       <br>Construct a ServletRequestEvent for the given ServletContext and ServletRequest.
+                                        <table class="table">
+                                         <tr><th>Parameter</th><th>Description</th></tr>
+                                           <tr><td><pre class="inline">sc</pre></td>   <td>
+                                                the ServletContext of the web application.</td></tr>
+                                           <tr><td><pre class="inline">request</pre></td>   <td>
+                                                the ServletRequest that is sending the event.</td></tr>
+                                        </table>
+                                        </p>
+                                 </details>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <details>
+                            <summary>Method Details</summary>
+                            <h5>getServletRequest</h5>
+                            <p>
+                            <em>public ServletRequest getServletRequest()</em>
+                           <br>Returns the ServletRequest that is changing.
+                            </p>
+                            <h5>getServletContext</h5>
+                            <p>
+                            <em>public ServletContext getServletContext()</em>
+                            <br>Returns the ServletContext of this web application.
+                             </p>
+                            </details>
+                                </td>
+                            </tr>
+                        </table>
+                        </ul>
+                        <ul class="content">
+                        <table class="table">
+                        <th>ServletContextEvent</th>
+                            <tr>
+                                <td>
+                                  <details>
+                                    <summary>Constructor Detail</summary>
+                                        <p>
+                                        <em>public ServletContextEvent(ServletContext source)</em>
+                                       <br>Construct a ServletContextEvent from the given context.
+                                        <table class="table">
+                                         <tr><th>Parameter</th><th>Description</th></tr>
+                                           <tr><td><pre class="inline">source</pre></td>   <td>
+                                                the ServletContext that is sending the event.</td></tr>
+                                        </table>
+                                        </p>
+                                 </details>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <details>
+                            <summary>Method Details</summary>
+                            <h5>getServletContext</h5>
+                            <p>
+                            <em>public ServletContext getServletContext()</em>
+                           <br>Return the ServletContext that changed.
+                            </p>
+                            </details>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="table">
+                        <th>ServletRequestAttributeEvent</th>
+                            <tr>
+                                <td>
+                                  <details>
+                                    <summary>Constructor Detail</summary>
+                                        <p>
+                                        <em>public ServletRequestAttributeEvent(ServletContext sc,
+                                    ServletRequest request,
+                                    java.lang.String name,
+                                    java.lang.Object value)</em>
+                                       <br>Construct a ServletRequestAttributeEvent giving the servlet context of this web application, the ServletRequest whose attributes are changing and the name and value of the attribute.
+                                        <table class="table">
+                                         <tr><th>Parameters</th><th>Description</th></tr>
+                                           <tr><td><pre class="inline">sc</pre></td>   <td>
+                                                the ServletContext that is sending the event.</td></tr>
+                                           <tr><td><pre class="inline">request</pre></td>   <td>
+                                                the ServletRequest that is sending the event.</td></tr>
+                                           <tr><td><pre class="inline">name</pre></td>   <td>
+                                                 the name of the request attribute.</td></tr>
+                                           <tr><td><pre class="inline">value</pre></td>   <td>
+                                                 the value of the request attribute.</td></tr>      
+                                        </table>
+                                        </p>
+                                 </details>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <details>
+                            <summary>Method Details</summary>
+                            <h5>getName</h5>
+                            <p>
+                            <em>public java.lang.String getName()</em>
+                           <br>Return the name of the attribute that changed on the ServletRequest.
+                            </p>
+                            <h5>getValue</h5>
+                            <p>
+                            <em>public java.lang.Object getValue()</em>
+                            <br>Returns the value of the attribute that has been added, removed or replaced. If the attribute was added, this is the value of the attribute. If the attribute was removed, this is the value of the removed attribute. If the attribute was replaced, this is the old value of the attribute.
+                            </p>
+                            </details>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="table">
+                        <th>ServletContextAttributeEvent</th>
+                            <tr>
+                                <td>
+                                  <details>
+                                    <summary>Constructor Detail</summary>
+                                        <p>
+                                        <em>public ServletContextAttributeEvent(ServletContext source,
+                                    String name,
+                                    Object value)</em>
+                                       <br>Construct a ServletContextAttributeEvent from the given context for the given attribute name and attribute value.
+                                        </p>
+                                 </details>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <details>
+                            <summary>Method Details</summary>
+                            <h5>getName</h5>
+                            <p>
+                            <em>public String getName()</em>
+                           <br>Return the name of the attribute that changed on the ServletContext.
+                            </p>
+                            <h5>getValue</h5>
+                            <p>
+                            <em>public Object getValue()</em>
+                            <br>Returns the value of the attribute that has been added, removed, or replaced. If the attribute was added, this is the value of the attribute. If the attribute was removed, this is the value of the removed attribute. If the attribute was replaced, this is the old value of the attribute.
+                            </p>
+                            </details>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <table class="table">
+                        <th>HttpSessionEvent</th>
+                            <tr>
+                                <td>
+                                  <details>
+                                    <summary>Constructor Detail</summary>
+                                        <p>
+                                        <em>public HttpSessionEvent(HttpSession source)</em>
+                                       <br>Construct a session event from the given source.
+                                        </p>
+                                 </details>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <details>
+                            <summary>Method Details</summary>
+                            <h5>getSession</h5>
+                            <p>
+                            <em>public HttpSession getSession()</em>
+                           <br>Return the session that changed.
+                            </p>
+                            </details>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="table">
+                        <th>HttpSessionBindingEvent</th>
+                            <tr>
+                                <td>
+                                  <details>
+                                    <summary>Constructor Detail</summary>
+                                        <p>
+                                        <em>public HttpSessionBindingEvent(HttpSession session,
+                               java.lang.String name)</em>
+                                       <br>Constructs an event that notifies an object that it has been bound to or unbound from a session. To receive the event, the object must implement HttpSessionBindingListener.
+                                       <table class="table">
+                                         <tr><th>Parameters</th><th>Description</th></tr>
+                                           <tr><td><pre class="inline">session</pre></td>   <td>
+                                                the session to which the object is bound or unbound</td></tr>
+                                           <tr><td><pre class="inline">name</pre></td>   <td>
+                                                the name with which the object is bound or unbound</td></tr> 
+                                        </table>
+                                        </p>
+                                        <p>
+                                            <em>public HttpSessionBindingEvent(HttpSession session,
+                               java.lang.String name,
+                               java.lang.Object value)</em>
+                               <br>Constructs an event that notifies an object that it has been bound to or unbound from a session. To receive the event, the object must implement HttpSessionBindingListener.
+                                    <table class="table">
+                                         <tr><th>Parameters</th><th>Description</th></tr>
+                                           <tr><td><pre class="inline">session</pre></td>   <td>
+                                                the session to which the object is bound or unbound</td></tr>
+                                           <tr><td><pre class="inline">name</pre></td>   <td>
+                                                the name with which the object is bound or unbound</td></tr> 
+                                        </table>
+                                        </p>
+                                 </details>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <details>
+                            <summary>Method Details</summary>
+                            <h5>getSession</h5>
+                            <p>
+                            <em>public HttpSession getSession()</em>
+                           <br>Return the session that changed.
+                           <br>Overrides: getSession in class HttpSessionEvent
+                            </p>
+
+                            <h5>getName</h5>
+                            <p>
+                                <em>public java.lang.String getName()</em>
+                                <br>Returns the name with which the attribute is bound to or unbound from the session.
+                            </p>
+                            <h5>getValue</h5>
+                            <p>
+                                <em>public java.lang.Object getValue()</em>
+                                <br>Returns the value of the attribute that has been added, removed or replaced. If the attribute was added (or bound), this is the value of the attribute. If the attribute was removed (or unbound), this is the value of the removed attribute. If the attribute was replaced, this is the old value of the attribute.
+                            </p>
+                            </details>
+                                </td>
+                            </tr>
+                        </table>
                         </ul>
                         <hr>
                         <details>
