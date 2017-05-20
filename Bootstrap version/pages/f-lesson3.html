@@ -74,7 +74,7 @@
                     		</ul>
                     		<li>Packages</li>
                     		<ul class = "content">
-                    			<li>javax.servlet</li>
+                    			<li>javax.servlet - contains a number of classes and interfaces that describe and define the contracts between a servlet class and the runtime environment provided for an instance of such a class by a conforming servlet container</li>
                     			<table class = "table">
                     				<tr><th>Name</th>           <th>Description</th></tr>
                     				<tr><td>Servlet</td>        <td>Defines methods that all servlets must implement.</td></tr>
@@ -85,21 +85,24 @@
                     				<tr><td>ServletContext</td>	<td>Defines a set of methods that a servlet uses to communicate with its servlet container, for example, to get the MIME type of a file, dispatch requests, or write to a log file.</td></tr>
                     				<tr><td>RequestDispatcher</td><td>Defines an object that receives requests from the client and sends them to any resource (such as a servlet, HTML file, or JSP file) on the server.</td></tr>
                     			</table>
-                    			<li>javax.servlet.http</li>
+                    			<li>javax.servlet.http - contains a number of classes and interfaces that describe and define the contracts between a servlet class running under the HTTP protocol and the runtime environment provided for an instance of such a class by a conforming servlet container</li>
                     			<table class = "table">
                     				<tr><th>Name</th>				<th>Description</th></tr>
-                    				<tr><td>HttpServlet</td>		<td>DESCRIPTION</td></tr>
-                    				<tr><td>HttpServletRequest</td>	<td>DESCRIPTION</td></tr>
-                    				<tr><td>HttpServletResponse</td><td>DESCRIPTION</td></tr>
-                    				<tr><td>HttpSession</td>		<td>DESCRIPTION</td></tr>
-                    				<tr><td>Cookie</td>				<td>DESCRIPTION</td></tr>
+                    				<tr><td>HttpServlet</td>		<td>Provides an abstract class to be subclassed to create an HTTP servlet suitable for a Web site.</td></tr>
+                    				<tr><td>HttpServletRequest</td>	<td>Extends the ServletRequest interface to provide request information for HTTP servlets.</td></tr>
+                    				<tr><td>HttpServletResponse</td><td>Extends the ServletResponse interface to provide HTTP-specific functionality in sending a response.</td></tr>
+                    				<tr><td>HttpSession</td>		<td>Provides a way to identify a user across more than one page request or visit to a Web site and to store information about that user.</td></tr>
+                    				<tr><td>Cookie</td>				<td>Creates a cookie, a small amount of information sent by a servlet to a Web browser, saved by the browser, and later sent back to the server.</td></tr>
                     			</table>
                     		</ul>
                     	</ul>
                         <hr>
                         <details>
+                        <ul>    
                             <summary class="references">References</summary>
                             <a href = "http://docs.oracle.com/javaee/6/api/javax/servlet/package-summary.html" target = "_blank">http://docs.oracle.com/javaee/6/api/javax/servlet/package-summary.html</a>
+                            <a href = "https://tomcat.apache.org/tomcat-5.5-doc/servletapi/javax/servlet/http/package-summary.html" target = "_blank">https://tomcat.apache.org/tomcat-5.5-doc/servletapi/javax/servlet/http/package-summary.html</a>
+                        </ul>
                         </details>
                         Previous: <a href="f-lesson2.html" id="finals-content" class="sub-link">Lesson 21 - Java Enterprise Edition</a><br>
       					Next: <a href="f-lesson4.html" id="finals-content" class="sub-link">Lesson 23 - Servlet Processing and other Servlet Concepts</a>
